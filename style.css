@@ -48,7 +48,31 @@ i {
   height: 5%;
   --x: 0;
   --y: 0;
-  top: calc(50% + var(--y) * var(--hex-height));
+  top: calc(50% - var(--y) * var(--hex-height));
   left: calc(50% + var(--x) * var(--hex-width));
   transform: translate(-50%, -50%);
 }
+
+
+.road1, .road2, .road3 {
+  transform-origin: center;
+  position: absolute;
+  background: #8A2BE2;
+  width: 2.5%;
+  height: 5%;
+  --x: 0;
+  --y: 0;
+  top: calc(50% - var(--y) * var(--hex-height));
+  left: calc(50% + var(--x) * var(--hex-width));
+  transform: translate(-50%, -50%);
+}
+
+.road1 {
+   transform: translate(-50%, -50%) rotate(-60deg);
+}
+
+
+.road3 {
+  transform: translate(-50%, -50%)  rotate(60deg);
+}
+
