@@ -1,5 +1,8 @@
 
 #board {
+  --hex-size: * 100% * 0.2;
+  --hex-width: calc(var(--hex-size) * 2);
+  --hex-height: calc(var(--hex-size) * sqrt(3));
   position: relative;
   aspect-ratio: 1;
   background: red;
@@ -17,13 +20,30 @@ i {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  --w: sqrt(3) * 0.5;
-  --h: 1;
-  width: calc(var(--w) * 100% * 0.23 );
-  height: calc(var(--h) * 100% * 0.23);
+  width: var(--hex-width);
+  height: var(--hex-height);
   --x: 0;
   --y: 0;
-  top:50%;
-  left:50%;
-  transform: translate(calc(-50% + var(--x) * 100%), calc(-50% + var(--y) * 100%));
+  top: 50%;
+  left: 50%;
+/*   transform: translate(
+    calc(-50% + var(--x) * 100%),
+    calc(-50% + var(--y) * 100%)
+  ); */
+}
+
+.house {
+  position: absolute;
+  background: blue;
+  width: 5%;
+  height: 5%;
+  border-radius: 50%;
+  --x: 0;
+  --y: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(
+    calc(-50% + var(--x) * 100%),
+    calc(-50% + var(--y) * 100%)
+  );
 }
