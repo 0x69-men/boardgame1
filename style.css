@@ -23,15 +23,12 @@ i {
   height: var(--hex-height);
   --x: 0;
   --y: 0;
-  top: 50%;
-  left: 50%;
-  transform: translate(
-    calc(-50% + var(--x) * 100%),
-    calc(-50% + var(--y) * 100%)
-  );
+  top: calc(50% + var(--y) * var(--hex-height));
+  left: calc(50% + var(--x) * var(--hex-width));
+  transform: translate(-50%, -50%);
 }
 
-.house {
+.number {
   position: absolute;
   background: blue;
   width: 5%;
@@ -39,7 +36,19 @@ i {
   border-radius: 50%;
   --x: 0;
   --y: 0;
-  top: calc(50% - var(--hex-heigh) * var(--y));
-  left: calc(50% + var(--hex-width) * var(--x));
+  top: calc(50% + var(--y) * var(--hex-height));
+  left: calc(50% + var(--x) * var(--hex-width));
+  transform: translate(-50%, -50%);
+}
+
+.house {
+  position: absolute;
+  background: aqua;
+  width: 5%;
+  height: 5%;
+  --x: 0;
+  --y: 0;
+  top: calc(50% + var(--y) * var(--hex-height));
+  left: calc(50% + var(--x) * var(--hex-width));
   transform: translate(-50%, -50%);
 }
