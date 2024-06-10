@@ -1,4 +1,12 @@
-import Alpine from "vendor/alpinejs@3.14.0.js"
+import {Alpine} from "/vendor/alpinejs@3.14.0.esm.js"
+
+
+import morph from "/vendor/morph@3.14.0.esm.js"
+ 
+window.Alpine = Alpine
+Alpine.plugin(morph)
+
+
 const morphOpt = {
     key(el) {
         // By default Alpine uses the `key=""` HTML attribute.
@@ -26,27 +34,28 @@ window.htmx.defineExtension("alpine-morph", {
 })
 
 
+Alpine.start()
 
 
 
-document.addEventListener('alpine:init', () => {
-    Alpine.data('dropdown', () => ({
-        open: false,
+// document.addEventListener('alpine:init', () => {
+//     Alpine.data('dropdown', () => ({
+//         open: false,
 
-        trigger: {
-            ['x-ref']: 'trigger',
-            ['@click']() {
-                this.open = true
-            },
-        },
+//         trigger: {
+//             ['x-ref']: 'trigger',
+//             ['@click']() {
+//                 this.open = true
+//             },
+//         },
 
-        dialogue: {
-            ['x-show']() {
-                return this.open
-            },
-            ['@click.outside']() {
-                this.open = false
-            },
-        },
-    }))
-})
+//         dialogue: {
+//             ['x-show']() {
+//                 return this.open
+//             },
+//             ['@click.outside']() {
+//                 this.open = false
+//             },
+//         },
+//     }))
+// })
