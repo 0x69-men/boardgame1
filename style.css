@@ -47,6 +47,10 @@ i {
   transform: translate(-50%, -50%);
 }
 
+.number:empty{
+  display:none;
+}
+
 .house {
   position: absolute;
   background: aqua;
