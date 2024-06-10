@@ -1,4 +1,19 @@
 #board {
   aspect-ratio: 1;
   background: red;
+  position: relativ;
+}
+
+i {
+  display: block;
+  box-sizing: border-box;
+}
+
+.tile {
+  position: absolute;
+  aspect-ratio: 1;
+  background-image: url("/tile.svg");
+  background-color: green;
+  --w: 1;
+  --h: sqrt(3);
 }
