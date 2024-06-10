@@ -34,6 +34,7 @@ window.htmx.defineExtension("alpine-morph", {
 
 Alpine.data("board", () => ({
   numbers: [4,11,12,10,6,6,4,10,8,3,9,5,11,5,6,8,3,2],
+  players: "add https://github.com/fangpenlin/avataaars"
 }));
 
 Alpine.start();
