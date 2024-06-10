@@ -1,42 +1,44 @@
-import {Alpine} from "/vendor/alpinejs@3.14.0.esm.js"
+import { Alpine } from "/vendor/alpinejs@3.14.0.esm.js";
 
+import morph from "/vendor/morph@3.14.0.esm.js";
 
-import morph from "/vendor/morph@3.14.0.esm.js"
- 
-window.Alpine = Alpine
-Alpine.plugin(morph)
+window.Alpine = Alpine;
 
+Alpine.plugin(morph);
 
 const morphOpt = {
-    key(el) {
-        // By default Alpine uses the `key=""` HTML attribute.
-        return el.id
-    },
-    lookahead: true,
-}
+  key(el) {
+    // By default Alpine uses the `key=""` HTML attribute.
+    return el.id;
+  },
+  lookahead: true,
+};
 
 window.htmx.defineExtension("alpine-morph", {
-    isInlineSwap: function (swapStyle) {
-        return swapStyle === "morph"
-    },
-    handleSwap: function (swapStyle, target, fragment) {
-        if (swapStyle === "morph") {
-            // console.log(target)
-            if (fragment.nodeType === Node.DOCUMENT_FRAGMENT_NODE) {
-                Alpine.morph(target, fragment.firstElementChild, morphOpt)
-            } else {
-                Alpine.morph(target, fragment.outerHTML, morphOpt)
-            }
-            window.scrollTo(0, target.offsetTop)
-            return [target]
-        }
-    },
-})
+  isInlineSwap: function (swapStyle) {
+    return swapStyle === "morph";
+  },
+  handleSwap: function (swapStyle, target, fragment) {
+    if (swapStyle === "morph") {
+      // console.log(target)
+      if (fragment.nodeType === Node.DOCUMENT_FRAGMENT_NODE) {
+        Alpine.morph(target, fragment.firstElementChild, morphOpt);
+      } else {
+        Alpine.morph(target, fragment.outerHTML, morphOpt);
+      }
+      window.scrollTo(0, target.offsetTop);
+      return [target];
+    }
+  },
+});
 
+Alpine.data("board", () => ({
+  numbers: [0, 1, 2, 3, 4, 5],
+}));
 
-Alpine.start()
+Alpine.start();
 
-
+console.log(Alpine)
 
 // document.addEventListener('alpine:init', () => {
 //     Alpine.data('dropdown', () => ({
