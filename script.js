@@ -35,11 +35,39 @@ window.htmx.defineExtension("alpine-morph", {
 Alpine.data("board", () => ({
   numbers: [4,11,12,10,6,6,4,10,8,3,9,5,11,5,6,8,3,2],
   players: "add https://github.com/fangpenlin/avataaars"
+  /*
+  
+  X15 Road
+  Settlement X5 (X4)
+  City X4 (X4)
+  
+  
+  TILES:
+  3 Hills (Brick)
+  4 Pasture (Wool)
+  3 Mountain (Ore)
+  4 Fields (Grain)
+  4 Forest (Lumber)
+  1 Deser
+  
+  Harbor Tokens:
+  X4 (3:1) Universal
+  X1 (2:1) Brick, Wool, Ore, Grain, Lumber
+  
+  
+  Resource Cards:
+  X19 Brick, Wool, Ore, Grain, Lumber
+  
+  Development Cards:
+  14 Knight
+  5 Victory Point (Chapel, Library, Market, Palace, University)
+  X2 Monopoly, Road Building, Year of Plenty
+
+  */
 }));
 
 Alpine.start();
 
-console.log(Alpine)
 
 // document.addEventListener('alpine:init', () => {
 //     Alpine.data('dropdown', () => ({

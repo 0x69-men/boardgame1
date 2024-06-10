@@ -86,3 +86,13 @@ i {
   transform: translate(-50%, -50%)  rotate(60deg);
 }
 
+
+
+.player {
+  border: 1px black solid;
+}
+.player .avatar {
+  width:20%;
+  background:blue;
+  aspect-ratio: 1;
+}
