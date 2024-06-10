@@ -1,7 +1,12 @@
-#board {
+.weirdWrap{
   aspect-ratio: 1;
   background: red;
   position: relativ;
+}
+#board {
+  position: relativ;
+  width: 100%;
+  height: 100%;
 }
 
 i {
@@ -11,9 +16,15 @@ i {
 
 .tile {
   position: absolute;
-  aspect-ratio: 1;
   background-image: url("/tile.svg");
+  background-position: center;
   background-color: green;
-  --w: 1;
-  --h: sqrt(3);
+  background-repeat: no-repeat;
+  background-size: contain;
+  --w: sqrt(3) * 0.5;
+  --h: 1;
+/*   width: calc(var(--w) * 100% / 5 ); */
+/*   height: calc(var(--h) * 100% / 5); */
+  width:20%;
+  height: 20%;
 }
