@@ -1,4 +1,4 @@
-
+import Alpine from "vendor/alpinejs@3.14.0.js"
 const morphOpt = {
     key(el) {
         // By default Alpine uses the `key=""` HTML attribute.
@@ -25,3 +25,28 @@ window.htmx.defineExtension("alpine-morph", {
     },
 })
 
+
+
+
+
+document.addEventListener('alpine:init', () => {
+    Alpine.data('dropdown', () => ({
+        open: false,
+
+        trigger: {
+            ['x-ref']: 'trigger',
+            ['@click']() {
+                this.open = true
+            },
+        },
+
+        dialogue: {
+            ['x-show']() {
+                return this.open
+            },
+            ['@click.outside']() {
+                this.open = false
+            },
+        },
+    }))
+})
