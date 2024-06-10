@@ -1,12 +1,9 @@
-.weirdWrap{
+
+#board {
+  position: relative;
   aspect-ratio: 1;
   background: red;
   position: relativ;
-}
-#board {
-  position: relativ;
-  width: 100%;
-  height: 100%;
 }
 
 i {
@@ -18,13 +15,15 @@ i {
   position: absolute;
   background-image: url("/tile.svg");
   background-position: center;
-  background-color: green;
   background-repeat: no-repeat;
   background-size: contain;
   --w: sqrt(3) * 0.5;
   --h: 1;
-/*   width: calc(var(--w) * 100% / 5 ); */
-/*   height: calc(var(--h) * 100% / 5); */
-  width:20%;
-  height: 20%;
+  width: calc(var(--w) * 100% * 0.23 );
+  height: calc(var(--h) * 100% * 0.23);
+  --x: 0;
+  --y: 0;
+  top:50%;
+  left:50%;
+  transform: translate(calc(-50% + var(--x) * 100%), calc(-50% + var(--y) * 100%));
 }
