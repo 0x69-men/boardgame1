@@ -37,9 +37,9 @@ Alpine.data("board", () => ({
   players: "add https://github.com/fangpenlin/avataaars"
   /*
   
-  X15 Road
-  Settlement X5 (X4)
-  City X4 (X4)
+  X15-PerColor Road
+  X5-PerColor Settlement
+  X4-PerColor City
   
   
   TILES:
