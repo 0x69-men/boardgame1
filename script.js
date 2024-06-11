@@ -1,6 +1,7 @@
 import { Alpine } from "/vendor/alpinejs@3.14.0.esm.js";
 
 import morph from "/vendor/morph@3.14.0.esm.js";
+import {QRCode} from "/vendor/qrcode.js";
 
 window.Alpine = Alpine;
 
@@ -67,7 +68,16 @@ Alpine.data("board", () => ({
 }));
 
 Alpine.start();
+var qrcode = new QRCode("player-QR", {
+    text: "http://jindo.dev.naver.com/collie",
+    width: 128,
+    height: 128,
+    colorDark : "#000000",
+    colorLight : "#ffffff",
+    correctLevel : QRCode.CorrectLevel.H
+});
 
+console.log(qrcode)
 
 // document.addEventListener('alpine:init', () => {
 //     Alpine.data('dropdown', () => ({
