@@ -68,8 +68,11 @@ Alpine.data("board", () => ({
 }));
 
 Alpine.start();
-var qrcode = new QRCode("player-QR", {
-    text: "http://jindo.dev.naver.com/collie",
+
+
+
+const qrcode = new QRCode("player-QR", {
+    text: "https://gugu-catan.glitch.me/",
     width: 128,
     height: 128,
     colorDark : "#000000",
