@@ -15,7 +15,7 @@ i {
 
 .tile {
   position: absolute;
-  background-image: url("/tile.svg");  
+  background-image: url("/tile.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -30,13 +30,12 @@ i {
 
 .number {
   position: absolute;
-  background-color: #FAFAFA;
-  border:1px solid #0A0A0A;
+  background-color: #fafafa;
+  border: 1px solid #0a0a0a;
   outline-offset: 1px;
-  outline: 2px solid #FAFAFA;
-  text-align:center;
-  
-  
+  outline: 2px solid #fafafa;
+  text-align: center;
+
   width: 5%;
   height: 5%;
   border-radius: 50%;
@@ -47,8 +46,8 @@ i {
   transform: translate(-50%, -50%);
 }
 
-.number:empty{
-  display:none;
+.number:empty {
+  display: none;
 }
 
 .house {
@@ -63,11 +62,12 @@ i {
   transform: translate(-50%, -50%);
 }
 
-
-.road1, .road2, .road3 {
+.road1,
+.road2,
+.road3 {
   transform-origin: center;
   position: absolute;
-  background: #8A2BE2;
+  background: #8a2be2;
   width: 2.5%;
   height: 5%;
   --x: 0;
@@ -78,21 +78,24 @@ i {
 }
 
 .road1 {
-   transform: translate(-50%, -50%) rotate(-60deg);
+  transform: translate(-50%, -50%) rotate(-60deg);
 }
-
 
 .road3 {
-  transform: translate(-50%, -50%)  rotate(60deg);
+  transform: translate(-50%, -50%) rotate(60deg);
 }
-
-
 
 .player {
+  margin: 16px;
   border: 1px black solid;
 }
+
 .player .avatar {
-  width:20%;
-  background:blue;
+  width: 30%;
+  background-image: url(/avatar.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
   aspect-ratio: 1;
 }
