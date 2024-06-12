@@ -14,8 +14,9 @@ i {
 }
 
 .icon {
-  display: block;
-  height: 100%;
+  display: inline-block;
+  min-width: 1em;
+  
   aspect-ratio: 1;
 
   background-position: center;
@@ -43,8 +44,21 @@ i {
 }
 
 .icon.trophy {
-  --color: red;
   --icon-url: url("icon.svg#trophy");
+}
+
+.icon.road {
+  --icon-url: url("icon.svg#road");
+}
+
+.icon.city {
+  --icon-url: url("icon.svg#city");
+}
+.icon.army {
+  --icon-url: url("icon.svg#army");
+}
+.icon.logn-road {
+  --icon-url: url("icon.svg#logn-road");
 }
 
 .tile {
