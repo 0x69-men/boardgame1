@@ -1,5 +1,5 @@
 #board {
-  --hex-size: 100% * 0.1;
+  --hex-size: 100% * 0.08;
   --hex-width: calc(var(--hex-size) * sqrt(3));
   --hex-height: calc(var(--hex-size) * 2);
   position: relative;
@@ -80,7 +80,7 @@ i {
   height: var(--hex-height);
   --x: 0;
   --y: 0;
-  top: calc(50% + var(--y) * var(--hex-height));
+  top: calc(50% - var(--y) * var(--hex-height));
   left: calc(50% + var(--x) * var(--hex-width));
   transform: translate(-50%, -50%);
 }
@@ -98,7 +98,7 @@ i {
   border-radius: 50%;
   --x: 0;
   --y: 0;
-  top: calc(50% + var(--y) * var(--hex-height));
+  top: calc(50% - var(--y) * var(--hex-height));
   left: calc(50% + var(--x) * var(--hex-width));
   transform: translate(-50%, -50%);
 }

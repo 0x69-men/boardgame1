@@ -45,59 +45,83 @@
       <section id="board" x-data="board">
         <!--TILES -->
         <!-- SEA -->
-        <i style="--x: -2; --y: -2.5" class="tile"></i>
-        
+        <i style="--x: 0.5; --y: 2.25" class="tile"></i>
+        <i style="--x: 1.5; --y: 2.25" class="tile"></i>
+        <i style="--x: 2; --y: 1.5" class="tile"></i>
+        <i style="--x: 2.5; --y: 0.75" class="tile"></i>
+        <i style="--x: 3; --y: 0" class="tile"></i>
+        <i style="--x: 2.5; --y: -0.75" class="tile"></i>
+        <i style="--x: 2; --y: -1.5" class="tile"></i>
+        <i style="--x: 1.5; --y: -2.25" class="tile"></i>
+        <i style="--x: 0.5; --y: -2.25" class="tile"></i>
+        <i style="--x: -0.5; --y: -2.25" class="tile"></i>
+        <i style="--x: -1.5; --y: -2.25" class="tile"></i>
+        <i style="--x: -2; --y: -1.5" class="tile"></i>
+        <i style="--x: -2.5; --y: -0.75" class="tile"></i>
+        <i style="--x: -3; --y: 0" class="tile"></i>
+        <i style="--x: -2.5; --y: 0.75" class="tile"></i>
+        <i style="--x: -2.5; --y: 0.75" class="tile"></i>
+        <i style="--x: -2; --y: 1.5" class="tile"></i>
+        <i style="--x: -1.5; --y: 2.25" class="tile"></i>
+        <i style="--x: -0.5; --y: 2.25" class="tile"></i>
+
         <!-- Board -->
-        <i style="--x: -1; --y: -1.5" class="tile"></i>
-        <i style="--x: 0; --y: -1.5" class="tile"></i>
-        <i style="--x: 1; --y: -1.5" class="tile"></i>
-
-        <i style="--x: -1.5; --y: -0.75" class="tile"></i>
-        <i style="--x: -0.5; --y: -0.75" class="tile"></i>
-        <i style="--x: 0.5; --y: -0.75" class="tile"></i>
-        <i style="--x: 1.5; --y: -0.75" class="tile"></i>
-
-        <i style="--x: -2; --y: 0" class="tile"></i>
-        <i style="--x: -1; --y: 0" class="tile"></i>
-        <i style="--x: 0; --y: 0" class="tile"></i>
-        <i style="--x: 1; --y: 0" class="tile"></i>
-        <i style="--x: 2; --y: 0" class="tile"></i>
-
-        <i style="--x: -1.5; --y: 0.75" class="tile"></i>
-        <i style="--x: -0.5; --y: 0.75" class="tile"></i>
-        <i style="--x: 0.5; --y: 0.75" class="tile"></i>
-        <i style="--x: 1.5; --y: 0.75" class="tile"></i>
-
-        <i style="--x: -1; --y: 1.5" class="tile"></i>
-        <i style="--x: 0; --y: 1.5" class="tile"></i>
         <i style="--x: 1; --y: 1.5" class="tile"></i>
+        <i style="--x: 0; --y: 1.5" class="tile"></i>
+        <i style="--x: -1; --y: 1.5" class="tile"></i>
+
+        <i style="--x: 1.5; --y: 0.75" class="tile"></i>
+        <i style="--x: 0.5; --y: 0.75" class="tile"></i>
+        <i style="--x: -0.5; --y: 0.75" class="tile"></i>
+        <i style="--x: -1.5; --y: 0.75" class="tile"></i>
+
+        <i style="--x: 2; --y: 0" class="tile"></i>
+        <i style="--x: 1; --y: 0" class="tile"></i>
+        <i style="--x: 0; --y: 0" class="tile"></i>
+        <i style="--x: -1; --y: 0" class="tile"></i>
+        <i style="--x: -2; --y: 0" class="tile"></i>
+
+        <i style="--x: 1.5; --y: -0.75" class="tile"></i>
+        <i style="--x: 0.5; --y: -0.75" class="tile"></i>
+        <i style="--x: -0.5; --y: -0.75" class="tile"></i>
+        <i style="--x: -1.5; --y: -0.75" class="tile"></i>
+
+        <i style="--x: 1; --y: -1.5" class="tile"></i>
+        <i style="--x: 0; --y: -1.5" class="tile"></i>
+        <i style="--x: -1; --y: -1.5" class="tile"></i>
 
         <!-- Numbers -->
         <i style="--x: -1; --y: -1.5" class="number" x-text="numbers[0]"></i>
         <i style="--x: 0; --y: -1.5" class="number" x-text="numbers[1]"></i>
         <i style="--x: 1; --y: -1.5" class="number" x-text="numbers[2]"></i>
 
-        <i style="--x: -1.5; --y: -0.75" class="number" x-text="numbers[3]"></i>
-        <i style="--x: -0.5; --y: -0.75" class="number" x-text="numbers[4]"></i>
-        <i style="--x: 0.5; --y: -0.75" class="number" x-text="numbers[5]"></i>
-        <i style="--x: 1.5; --y: -0.75" class="number" x-text="numbers[6]"></i>
 
-        <i style="--x: -2; --y: 0" class="number" x-text="numbers[7]"></i>
-        <i style="--x: -1; --y: 0" class="number" x-text="numbers[8]"></i>
-        <i style="--x: 0; --y: 0" class="number" x-text="numbers[9]"></i>
-        <i style="--x: 1; --y: 0" class="number" x-text="numbers[10]"></i>
-        <i style="--x: 2; --y: 0" class="number" x-text="numbers[11]"></i>
 
-        <i style="--x: -1.5; --y: 0.75" class="number" x-text="numbers[12]"></i>
-        <i style="--x: -0.5; --y: 0.75" class="number" x-text="numbers[13]"></i>
-        <i style="--x: 0.5; --y: 0.75" class="number" x-text="numbers[14]"></i>
+        <i style="--x: 1; --y: 1.5" class="number" x-text="numbers[18]"></i>
+        <i style="--x: 0; --y: 1.5" class="number" x-text="numbers[17]"></i>
+        <i style="--x: -1; --y: 1.5" class="number" x-text="numbers[16]"></i>
         <i style="--x: 1.5; --y: 0.75" class="number" x-text="numbers[15]"></i>
 
-        <i style="--x: -1; --y: 1.5" class="number" x-text="numbers[16]"></i>
-        <i style="--x: 0; --y: 1.5" class="number" x-text="numbers[17]"></i>
-        <i style="--x: 1; --y: 1.5" class="number" x-text="numbers[18]"></i>
-        <i style="--x: 1; --y: 1.5" class="number">
-          <i class="icon bandit"> </i
+        <i style="--x: 0.5; --y: 0.75" class="number" x-text="numbers[14]"></i>
+        <i style="--x: -0.5; --y: 0.75" class="number" x-text="numbers[13]"></i>
+        <i style="--x: -1.5; --y: 0.75" class="number" x-text="numbers[12]"></i>
+        
+        <i style="--x: 2; --y: 0" class="number" x-text="numbers[11]"></i>
+        <i style="--x: 1; --y: 0" class="number" x-text="numbers[10]"></i>
+        <i style="--x: 0; --y: 0" class="number" x-text="numbers[9]"></i>
+        <i style="--x: -1; --y: 0" class="number" x-text="numbers[8]"></i>
+        <i style="--x: -2; --y: 0" class="number" x-text="numbers[7]"></i>
+        
+        
+        <i style="--x: 1.5; --y: -0.75" class="number" x-text="numbers[6]"></i>
+        <i style="--x: 0.5; --y: -0.75" class="number" x-text="numbers[5]"></i>
+        <i style="--x: -0.5; --y: -0.75" class="number" x-text="numbers[4]"></i>
+        <i style="--x: -1.5; --y: -0.75" class="number" x-text="numbers[3]"></i>
+    
+        
+
+        <i style="--x: 1; --y: 1.5" class="number"
+          ><i class="icon bandit"></i
         ></i>
         <!-- Houses -->
         <i style="--x: 0; --y: -0.5" class="house"></i>
