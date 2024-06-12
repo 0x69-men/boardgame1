@@ -13,6 +13,27 @@ i {
   box-sizing: border-box;
 }
 
+.icon {
+  display: block;
+  height: 100%;
+  aspect-ratio: 1;
+
+  background-position:center;
+  background-repeat:no-repeat;
+  color: red;
+  background-image: linear-gradient(45deg, green, green), url("icon.svg#" var());
+  background-color: white;
+  background-blend-mode: lighten, normal;
+
+}
+
+.icon.trophy {
+  background-image: linear-gradient(45deg, green, green), url("icon.svg#trophy");
+  background-color: white;
+  background-blend-mode: lighten, normal;
+  
+}
+
 .tile {
   position: absolute;
   background-image: url("/tile.svg");
