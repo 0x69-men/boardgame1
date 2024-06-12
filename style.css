@@ -60,6 +60,12 @@ i {
 .icon.logn-road {
   --icon-url: url("icon.svg#logn-road");
 }
+.icon.exchange {
+  --icon-url: url("icon.svg#exchange");
+}
+.icon.bandit {
+  --icon-url: url("icon.svg#bandit");
+}
 
 .tile {
   position: absolute;
