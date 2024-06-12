@@ -66,6 +66,9 @@ i {
 .icon.bandit {
   --icon-url: url("icon.svg#bandit");
 }
+.icon.card-pack {
+  --icon-url: url("icon.svg#card-pack");
+}
 
 .tile {
   position: absolute;
