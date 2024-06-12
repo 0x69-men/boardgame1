@@ -18,20 +18,33 @@ i {
   height: 100%;
   aspect-ratio: 1;
 
-  background-position:center;
-  background-repeat:no-repeat;
+  background-position: center;
+  background-repeat: no-repeat;
   color: red;
-  background-image: linear-gradient(45deg, green, green), url("icon.svg#" var());
+  --color: black;
+  --icon-url: url("icon.svg#village");
+  background-image: linear-gradient(0deg, var(--color), var(--color)),
+    var(--icon-url);
   background-color: white;
   background-blend-mode: lighten, normal;
+}
 
+
+.ag-theme-material {
+    --ag-icon-image-asc: url('arrow-up.svg');
+    --ag-icon-font-color-asc: transparent;
+}
+
+.ag-icon-asc::after {
+    background-image: none;
+    background-color: green;
+    -webkit-mask: var(--ag-icon-image-asc) no-repeat center/cover;
+    mask: var(--ag-icon-image-asc) no-repeat center/cover;
 }
 
 .icon.trophy {
-  background-image: linear-gradient(45deg, green, green), url("icon.svg#trophy");
-  background-color: white;
-  background-blend-mode: lighten, normal;
-  
+  --color: red;
+  --icon-url: url("icon.svg#trophy");
 }
 
 .tile {
