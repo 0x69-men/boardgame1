@@ -152,84 +152,42 @@
       <section>
         <template x-for="(p, i) in players">
           <div class="player">
-            <img src="/avatar.svg" />
+<!--             <img class="avatar" src="/avatar.svg" /> -->
+            <i class="name" x-text="p.name"></i>
             <i class="points">
               <span class="icon trophy"></span>
               <span x-text="p.points"></span>
             </i>
-            <i class="longest-road" x-text="15"></i>
-            <i class="largest-army" x-text="312"></i>
+            <i class="longest-road">
+            <span class="icon logn-road"></span>
+            </i>
+            <i class="largest-army">
+            <span class="icon army"></span>
+            </i>
             <i class="roads">
               <span class="icon road"></span>
               <span x-text="p.roads.length"> </span>
             </i>
             <i class="development-cards">
-              <span class="icon road"></span>
+              <span class="icon card-pack"></span>
               <span x-text="p.developmentCards.length"></span>
             </i>
             <i class="resource-cards">
-              <span class="icon road"></span>
+              <span class="icon card-pack"></span>
+              <span x-text="p.resources"></span>
+            </i>
+            <i class="villages">
+              <span class="icon village"></span>
+              <span x-text="p.resources"></span>
+            </i>
+            <i class="cities">
+              <span class="icon city"></span>
               <span x-text="p.resources"></span>
             </i>
           </div>
         </template>
       </section>
 
-      <!-- 
-      <section>
-        <div class="player">
-          <div class="avatar"></div>
-          <div id="player-QR"></div>
-          <div class="name">Kalabibishkis</div>
-          <div>Resource Cards:<span class="icon card-pack"></span> 12</div>
-          <div>Development Cards:<span class="icon card-pack"></span> 3</div>
-          <div><span class="icon trophy"></span>10</div>
-          <div><span class="icon road"></span>4</div>
-          <div><span class="icon home"></span> 4</div>
-          <div><span class="icon city"></span> 4</div>
-          <div><span class="icon army"></span></div>
-          <div><span class="icon logn-road"></span></div>
-        </div>
-
-        <div class="player">
-          <div class="avatar"></div>
-          <div class="name">Kalabibishkis</div>
-          <div>Resource Cards: 12</div>
-          <div>Development Cards: 3</div>
-          <div>P: 10</div>
-          <div>Roads: 4</div>
-          <div>Settlements: 4</div>
-          <div>Cities: 4</div>
-          <div>Largest Army</div>
-          <div>Longest Road</div>
-        </div>
-
-        <div class="player">
-          <div class="avatar"></div>
-          <div class="name">Kalabibishkis</div>
-          <div>Resource Cards: 12</div>
-          <div>Development Cards: 3</div>
-          <div>P: 10</div>
-          <div>Roads: 4</div>
-          <div>Settlements: 4</div>
-          <div>Cities: 4</div>
-          <div>Largest Army</div>
-          <div>Longest Road</div>
-        </div>
-
-        <div class="player">
-          <div class="avatar"></div>
-          <div class="name">Kalabibishkis</div>
-          <div>Resource Cards: 12</div>
-          <div>Development Cards: 3</div>
-          <div>P: 10</div>
-          <div>Roads: 4</div>
-          <div>Settlements: 4</div>
-          <div>Cities: 4</div>
-          <div>Largest Army</div>
-          <div>Longest Road</div>
-        </div>
-      </section> -->
     </div>
   </body>
 </html>

@@ -146,16 +146,27 @@ i {
 .road3 {
   transform: translate(-50%, -50%) rotate(60deg);
 }
+
+
+/*Player Info*/
 .player {
   position: relative;
   width: 200px;
   height: 200px;
   background:blue;
+  border-radius:50%;
 }
 
-.player.points{
-  position: absolute;
+.player .points,
+.player .name,
+.player .longest-road,
+.player .largest-army,
+.player .roads,
+.player .development-cards,
+.player .resource-cards {
+  background:yellow
 }
+
 
 /* 
 .player {
