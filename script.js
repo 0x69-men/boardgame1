@@ -33,8 +33,6 @@ window.htmx.defineExtension("alpine-morph", {
   },
 });
 
-
-
 Alpine.data("game", () => ({
   playerColors: [
     "#DE9EB5",
@@ -60,11 +58,22 @@ Alpine.data("game", () => ({
     {
       name: "Kalabibishkis",
       avatar: 123, //"add https://github.com/fangpenlin/avataaars",
-      developmentCards: ["Knight","Knight","Knight"],
-      resources: { Brick: 9, Wool: 8, Ore: 7, Grain: 6, Lumber: 5, },
-      roads: [1,2,3,4,5,6],
-      villages: [1,2,3,4,5],
-      cities: [1,3,5,8],
+      developmentCards: ["Knight", "Knight", "Knight"],
+      resourcesCards: { Brick: 9, Wool: 8, Ore: 7, Grain: 6, Lumber: 5 },
+      roads: [1, 2, 3, 4, 5, 6],
+      villages: [1, 2, 3, 4, 5],
+      cities: [1, 3, 5, 8],
+      get points() {
+        return 44
+      },
+      get resources() {
+        return this.resourcesCards.Brick
+         +this.resourcesCards.Wool 
+        +this.resourcesCards.Ore 
+        +this.resourcesCards.Grain 
+        +this.resourcesCards.Lumber
+        
+      },
     },
   ],
   longestRoad: -1,
