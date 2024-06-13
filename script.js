@@ -1,7 +1,7 @@
 import { Alpine } from "/vendor/alpinejs@3.14.0.esm.js";
 
 import morph from "/vendor/morph@3.14.0.esm.js";
-import {QRCode} from "/vendor/qrcode.js";
+import { QRCode } from "/vendor/qrcode.js";
 
 window.Alpine = Alpine;
 
@@ -34,9 +34,20 @@ window.htmx.defineExtension("alpine-morph", {
 });
 
 Alpine.data("board", () => ({
+  playerColors: [
+    "#DE9EB5",
+    "#CF6A6B",
+    "#DE904C",
+    "#E2C144",
+    "#92CBC5",
+    "#A0DEF1",
+    "#8DB5F9",
+    "#A79ADA",
+  ],
   // numbers: [4,11,12,10,6,6,4,10,8,3,9,5,11,5,6,8,3,2],
-  numbers: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18],
-  players: "add https://github.com/fangpenlin/avataaars"
+  numbers: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18],
+  tiles: [],
+  players: "add https://github.com/fangpenlin/avataaars",
   /*
   
   X15-PerColor Road
@@ -70,18 +81,16 @@ Alpine.data("board", () => ({
 
 Alpine.start();
 
-
-
 const qrcode = new QRCode("player-QR", {
-    text: "https://gugu-catan.glitch.me/",
-    width: 128,
-    height: 128,
-    colorDark : "#000000",
-    colorLight : "#ffffff",
-    correctLevel : QRCode.CorrectLevel.H
+  text: "https://gugu-catan.glitch.me/",
+  width: 128,
+  height: 128,
+  colorDark: "#000000",
+  colorLight: "#ffffff",
+  correctLevel: QRCode.CorrectLevel.H,
 });
 
-console.log(qrcode)
+console.log(qrcode);
 
 // document.addEventListener('alpine:init', () => {
 //     Alpine.data('dropdown', () => ({

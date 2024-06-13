@@ -4,7 +4,7 @@
   --hex-height: calc(var(--hex-size) * 2);
   position: relative;
   aspect-ratio: 1;
-  background: red;
+  background: #5290C1;
   position: relativ;
 }
 
