@@ -152,42 +152,41 @@
       <section>
         <template x-for="(p, i) in players">
           <div class="player">
-<!--             <img class="avatar" src="/avatar.svg" /> -->
+            <!--             <img class="avatar" src="/avatar.svg" /> -->
             <i class="name" x-text="p.name"></i>
             <i class="points">
               <span class="icon trophy"></span>
-              <span x-text="p.points"></span>
+              <span class="text" x-text="p.points"></span>
             </i>
             <i class="longest-road">
-            <span class="icon logn-road"></span>
+              <span class="icon logn-road"></span>
             </i>
             <i class="largest-army">
-            <span class="icon army"></span>
+              <span class="icon army"></span>
             </i>
             <i class="roads">
               <span class="icon road"></span>
-              <span x-text="p.roads.length"> </span>
+              <span class="text" x-text="p.roads.length"> </span>
             </i>
             <i class="development-cards">
               <span class="icon card-pack"></span>
-              <span x-text="p.developmentCards.length"></span>
+              <span class="text" x-text="p.developmentCards.length"></span>
             </i>
             <i class="resource-cards">
               <span class="icon card-pack"></span>
-              <span x-text="p.resources"></span>
+              <span class="text" x-text="p.resources"></span>
             </i>
             <i class="villages">
               <span class="icon village"></span>
-              <span x-text="p.resources"></span>
+              <span class="text" x-text="p.villages.length"></span>
             </i>
             <i class="cities">
               <span class="icon city"></span>
-              <span x-text="p.resources"></span>
+              <span class="text" x-text="p.cities.length"></span>
             </i>
           </div>
         </template>
       </section>
-
     </div>
   </body>
 </html>
