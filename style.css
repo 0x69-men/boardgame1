@@ -1,10 +1,10 @@
 #board {
   --hex-size: 100% * 0.08;
-  --hex-width: calc(var(--hex-size) * 1.732);/*sqrt(3)*/
+  --hex-width: calc(var(--hex-size) * 1.732); /*sqrt(3)*/
   --hex-height: calc(var(--hex-size) * 2);
   position: relative;
   aspect-ratio: 1;
-  background: #5290C1;
+  background: #5290c1;
   position: relativ;
 }
 
@@ -16,7 +16,7 @@ i {
 .icon {
   display: inline-block;
   min-width: 1em;
-  
+
   aspect-ratio: 1;
 
   background-position: center;
@@ -30,17 +30,16 @@ i {
   background-blend-mode: lighten, normal;
 }
 
-
 .ag-theme-material {
-    --ag-icon-image-asc: url('arrow-up.svg');
-    --ag-icon-font-color-asc: transparent;
+  --ag-icon-image-asc: url("arrow-up.svg");
+  --ag-icon-font-color-asc: transparent;
 }
 
 .ag-icon-asc::after {
-    background-image: none;
-    background-color: green;
-    -webkit-mask: var(--ag-icon-image-asc) no-repeat center/cover;
-    mask: var(--ag-icon-image-asc) no-repeat center/cover;
+  background-image: none;
+  background-color: green;
+  -webkit-mask: var(--ag-icon-image-asc) no-repeat center/cover;
+  mask: var(--ag-icon-image-asc) no-repeat center/cover;
 }
 
 .icon.trophy {
@@ -70,8 +69,6 @@ i {
   --icon-url: url("icon.svg#card-pack");
 }
 
-
-
 .tile {
   position: absolute;
   background-image: url("/tile.svg");
@@ -87,8 +84,23 @@ i {
   transform: translate(-50%, -50%);
 }
 
-.tile.sea {
-    background-image: url("/tile.svg#desert");
+.tile.Hills {
+  background-image: url("tile.svg#Hills");
+}
+.tile.Pasture {
+  background-image: url("tile.svg#Pasture");
+}
+.tile.Mountain {
+  background-image: url("tile.svg#Mountain");
+}
+.tile.Fields {
+  background-image: url("tile.svg#Fields");
+}
+.tile.Forest {
+  background-image: url("tile.svg#Forest");
+}
+.tile.Deser {
+  background-image: url("tile.svg#Deser");
 }
 
 .number {
