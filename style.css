@@ -84,6 +84,9 @@ i {
   transform: translate(-50%, -50%);
 }
 
+.tile.Sea {
+  background-image: url("tile.svg#Sea");
+}
 .tile.Hills {
   background-image: url("tile.svg#Hills");
 }

@@ -8,7 +8,8 @@
             g:target { display: inline; }
         </style>
     </defs>
-    <g id="Sea" color="#5290C1">
+<!--     <g id="Sea" color="#5290C1"> -->
+    <g id="Sea" color="#4782AC">
         <polygon points="0,2000 1732,1000 1732,-1000 0,-2000 -1732,-1000 -1732,1000" fill="currentColor"  />
     </g>
     <g id="Deser" color="#C3AF6F">
