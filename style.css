@@ -22,7 +22,7 @@ i {
   background-position: center;
   background-repeat: no-repeat;
   color: red;
-  --color: blue;
+  --color: black;
   --icon-url: url("icon.svg#village");
   mask: var(--icon-url);
   background-color: var(--color);

@@ -54,7 +54,12 @@ Alpine.data("board", () => ({
 ...Array(4).fill("Forest"),
 ...Array(1).fill("Deser"),
   ],
-  players: "add https://github.com/fangpenlin/avataaars",
+  players:[
+    {
+      name:"Kalabibishkis",
+    
+    }
+  ], //"add https://github.com/fangpenlin/avataaars",
   /*
   
   X15-PerColor Road

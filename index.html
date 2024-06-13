@@ -147,6 +147,15 @@
       <section>
         <span class="icon exchange"></span>
       </section>
+      
+      <section>
+        <ul x-data="{ colors: ['Red', 'Orange', 'Yellow'] }">
+          <template x-for="color in colors">
+            <li x-text="color"></li>
+          </template>
+        </ul>
+      </section>
+      
       <section>
         <div class="player">
           <div class="avatar"></div>
