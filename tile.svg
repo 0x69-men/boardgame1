@@ -1,26 +1,32 @@
 <svg width="3464" height="4000" viewBox="-1732 -2000 3464 4000" xmlns="http://www.w3.org/2000/svg">
     <defs>
         <style>
+            svg {
+            fill: currentColor;
+            }
             g { display: none; }
             g:target { display: inline; }
         </style>
     </defs>
-    <g id="sea" color="#5290C1">
+    <g id="Sea" color="#5290C1">
         <polygon points="0,2000 1732,1000 1732,-1000 0,-2000 -1732,-1000 -1732,1000" fill="currentColor"  />
     </g>
-    <g id="desert" color="#C3AF6F">
+    <g id="Deser" color="#C3AF6F">
         <polygon points="0,2000 1732,1000 1732,-1000 0,-2000 -1732,-1000 -1732,1000" fill="currentColor"  />
     </g>
-    <g id="ship" color="#9BBC41">
+    <g id="Hills" color="#7A532C">
         <polygon points="0,2000 1732,1000 1732,-1000 0,-2000 -1732,-1000 -1732,1000" fill="currentColor"  />
     </g>
-    <g id="wood" color="#495B29">
+    <g id="Pasture" color="#9BBC41">
         <polygon points="0,2000 1732,1000 1732,-1000 0,-2000 -1732,-1000 -1732,1000" fill="currentColor"  />
     </g>
-    <g id="ore" color="#6F6B74">
+    <g id="Forest" color="#495B29">
         <polygon points="0,2000 1732,1000 1732,-1000 0,-2000 -1732,-1000 -1732,1000" fill="currentColor"  />
     </g>
-    <g id="bricks" color="#7A532C">
+    <g id="Mountain" color="#6F6B74">
+        <polygon points="0,2000 1732,1000 1732,-1000 0,-2000 -1732,-1000 -1732,1000" fill="currentColor"  />
+    </g>
+    <g id="Fields" color="#DCBD49">
         <polygon points="0,2000 1732,1000 1732,-1000 0,-2000 -1732,-1000 -1732,1000" fill="currentColor"  />
     </g>
 </svg>

@@ -46,7 +46,14 @@ Alpine.data("board", () => ({
   ],
   // numbers: [4,11,12,10,6,6,4,10,8,3,9,5,11,5,6,8,3,2],
   numbers: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18],
-  tiles: [],
+  tiles: [
+    ...Array("Hills").fill(3),
+    ...Array("Pasture").fill(4),
+    ...Array("Mountain").fill(3),
+    ...Array("Fields").fill(4),
+    ...Array("Forest").fill(4),
+    ...Array("Deser").fill(1),
+  ],
   players: "add https://github.com/fangpenlin/avataaars",
   /*
   
