@@ -166,9 +166,7 @@ i {
 .player .cities,
 .player .development-cards,
 .player .resource-cards{
-  position: absolute;
-  background: yellow;
-  
+  position: absolute;  
 }
 
 .player .roads,
@@ -212,6 +210,15 @@ i {
   --color: red;
 }
 
+.player .points .text {
+  position: absolute;
+  bottom: 0;
+  left:50%;
+  transform: translate(-50%, 0);
+  text-shadow: 1px 1px 1px white;
+  font-weight: 700;
+  line-height: 1em;
+}
 
 
 
