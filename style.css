@@ -72,7 +72,7 @@ i {
 
 .tile2 {
   background-image: url("/tile.svg");
-  background-color: blue;
+  background-color: yellow;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
