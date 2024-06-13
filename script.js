@@ -33,6 +33,8 @@ window.htmx.defineExtension("alpine-morph", {
   },
 });
 
+
+
 Alpine.data("board", () => ({
   playerColors: [
     "#DE9EB5",
@@ -47,19 +49,37 @@ Alpine.data("board", () => ({
   // numbers: [4,11,12,10,6,6,4,10,8,3,9,5,11,5,6,8,3,2],
   numbers: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18],
   tiles: [
-...Array(3).fill("Hills"),
-...Array(4).fill("Pasture"),
-...Array(3).fill("Mountain"),
-...Array(4).fill("Fields"),
-...Array(4).fill("Forest"),
-...Array(1).fill("Deser"),
+    ...Array(3).fill("Hills"),
+    ...Array(4).fill("Pasture"),
+    ...Array(3).fill("Mountain"),
+    ...Array(4).fill("Fields"),
+    ...Array(4).fill("Forest"),
+    ...Array(1).fill("Deser"),
   ],
-  players:[
+  players: [
     {
-      name:"Kalabibishkis",
-    
-    }
-  ], //"add https://github.com/fangpenlin/avataaars",
+      name: "Kalabibishkis",
+      avatar: 123, //"add https://github.com/fangpenlin/avataaars",
+      developmentCards: [],
+      resources: { Brick: 0, Wool: 0, Ore: 0, Grain: 0, Lumber: 0, },
+      roads: [],
+      villages: [],
+      cities: [],
+    },
+  ],
+  longestRoad: -1,
+  largestArmy: -1,
+  developmentCards: [
+    "Chapel",
+    "Library",
+    "Market",
+    "Palace",
+    "University",
+    ...Array(14).fill("Knight"),
+    ...Array(2).fill("Monopoly"),
+    ...Array(2).fill("Road Building"),
+    ...Array(2).fill("Year of Plenty"),
+  ],
   /*
   
   X15-PerColor Road
