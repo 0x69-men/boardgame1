@@ -22,34 +22,18 @@ i {
   background-position: center;
   background-repeat: no-repeat;
   color: red;
-  --color: black;
+  --color: blue;
   --icon-url: url("icon.svg#village");
-  background-image: linear-gradient(0deg, var(--color), var(--color)),
-    var(--icon-url);
-  background-color: white;
-  background-blend-mode: lighten, normal;
+  mask: var(--icon-url);
+  background-color: var(--color);
+  
 }
-
-.ag-theme-material {
-  --ag-icon-image-asc: url("arrow-up.svg");
-  --ag-icon-font-color-asc: transparent;
-}
-
-.ag-icon-asc::after {
-  background-image: none;
-  background-color: green;
-  -webkit-mask: var(--ag-icon-image-asc) no-repeat center/cover;
-  mask: var(--ag-icon-image-asc) no-repeat center/cover;
-}
-
 .icon.trophy {
   --icon-url: url("icon.svg#trophy");
 }
-
 .icon.road {
   --icon-url: url("icon.svg#road");
 }
-
 .icon.city {
   --icon-url: url("icon.svg#city");
 }
