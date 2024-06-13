@@ -41,8 +41,9 @@
       hx-swap="morph"
       hx-boost="true"
       hx-indicator="body"
+      x-data="game"
     >
-      <section id="board" x-data="board">
+      <section id="board">
         <!--TILES -->
         <!-- SEA -->
         <i style="--x: 0.5; --y: 2.25" class="tile Sea"></i>
@@ -147,16 +148,22 @@
       <section>
         <span class="icon exchange"></span>
       </section>
-      
-      
+
       <section>
-          <template x-for="player in players">
-            <div>ajksdfjkasdfhasjkfhasdj</div>
-          </template>
+        <template x-for="player in players">
+          <div class="player">
+            <img src="/avatar.svg" />
+            <i class="points" x-text="12"></i>
+            <i class="longest-road" x-text="15"></i>
+            <i class="largest-army" x-text="312"></i>
+            <i class="roads" x-text="312"></i>
+            <i class="development-cards" x-text="312"></i>
+            <i class="resource-cards" x-text="312"></i>
+          </div>
+        </template>
       </section>
-      
-      
-<!-- 
+
+      <!-- 
       <section>
         <div class="player">
           <div class="avatar"></div>

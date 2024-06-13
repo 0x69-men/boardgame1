@@ -147,8 +147,16 @@ i {
   transform: translate(-50%, -50%) rotate(60deg);
 }
 .player {
-  
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background:blue;
 }
+
+.player.points{
+  position: absolute;
+}
+
 /* 
 .player {
   margin: 16px;

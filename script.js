@@ -35,7 +35,7 @@ window.htmx.defineExtension("alpine-morph", {
 
 
 
-Alpine.data("board", () => ({
+Alpine.data("game", () => ({
   playerColors: [
     "#DE9EB5",
     "#CF6A6B",
