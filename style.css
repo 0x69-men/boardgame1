@@ -1,6 +1,6 @@
 #board {
   --hex-size: 100% * 0.08;
-  --hex-width: calc(var(--hex-size) * sqrt(3));
+  --hex-width: calc(var(--hex-size) * 1.732);/*sqrt(3)*/
   --hex-height: calc(var(--hex-size) * 2);
   position: relative;
   aspect-ratio: 1;
@@ -70,16 +70,6 @@ i {
   --icon-url: url("icon.svg#card-pack");
 }
 
-.tile2 {
-  background-image: url("/tile.svg");
-  background-color: yellow;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 200px;
-  height:200px;
-  
-}
 
 
 .tile {
