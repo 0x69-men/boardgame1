@@ -156,9 +156,18 @@
             <i class="points" x-text="12"></i>
             <i class="longest-road" x-text="15"></i>
             <i class="largest-army" x-text="312"></i>
-            <i class="roads" x-text="312"></i>
-            <i class="development-cards" x-text="312"></i>
-            <i class="resource-cards" x-text="312"></i>
+            <i class="roads">
+              <span class="icon road"></span>
+              <span x-text="player.roads.length"> </span>
+            </i>
+            <i class="development-cards">
+              <span class="icon road"></span>
+              <span x-text="player.developmentCards.length"> </span>
+            </i>
+            <i class="resource-cards">
+              <span class="icon road"></span>
+              <span x-text="player.developmentCards.length"></span>
+            </i>
           </div>
         </template>
       </section>
