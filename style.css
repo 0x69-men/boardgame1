@@ -70,6 +70,18 @@ i {
   --icon-url: url("icon.svg#card-pack");
 }
 
+.tile2 {
+  background-image: url("/tile.svg");
+  background-color: blue;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 200px;
+  height:200px;
+  
+}
+
+
 .tile {
   position: absolute;
   background-image: url("/tile.svg");
