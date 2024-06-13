@@ -122,7 +122,7 @@ const qrcode = new QRCode("player-QR", {
   correctLevel: QRCode.CorrectLevel.H,
 });
 
-console.log(qrcode);
+// console.log(qrcode);
 
 // document.addEventListener('alpine:init', () => {
 //     Alpine.data('dropdown', () => ({

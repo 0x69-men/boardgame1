@@ -146,7 +146,10 @@ i {
 .road3 {
   transform: translate(-50%, -50%) rotate(60deg);
 }
-
+.player {
+  
+}
+/* 
 .player {
   margin: 16px;
   border: 1px black solid;
@@ -160,4 +163,4 @@ i {
   background-position: center;
 
   aspect-ratio: 1;
-}
+} */
