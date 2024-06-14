@@ -188,18 +188,30 @@ i {
   border: 2px black solid;
   background: white;
   right: 0;
-  border-radius: 2;
-  aspect-ratio: 1;
+  width: 20px;
+  height: 20px;
 }
 
-.player .roads{}
-.player .villages{}
+.player .roads{
+  top: 50%;
+  transform: translate(50%, -250%);
+}
+.player .villages{
+  top: 50%;
+  transform: translate(50%, -150%);
+}
 .player .cities{
   top: 50%;
   transform: translate(50%, -50%);
 }
-.player .development-cards{}
-.player .resource-cards {}
+.player .development-cards{
+  top: 50%;
+  transform: translate(50%, 50%);
+}
+.player .resource-cards {
+  top: 50%;
+  transform: translate(50%, 150%);
+}
 
 
 .player .points,
