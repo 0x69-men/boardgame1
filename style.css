@@ -205,6 +205,9 @@ i {
 .player .resource-cards .text{
   position: absolute;
   right: -100%;
+  text-align: left;
+  width:100%;
+  padding: 5px;
 }
 
 .player .roads .icon,
