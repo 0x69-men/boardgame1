@@ -165,7 +165,7 @@ i {
 .player .villages,
 .player .cities,
 .player .development-cards,
-.player .resource-cards{
+.player .resource-cards {
   position: absolute;  
 }
 
@@ -221,19 +221,6 @@ i {
 }
 
 
-
-/* 
-.player {
-  margin: 16px;
-  border: 1px black solid;
+.player.roads{
+  
 }
-
-.player .avatar {
-  width: 30%;
-  background-image: url(/avatar.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-
-  aspect-ratio: 1;
-} */
