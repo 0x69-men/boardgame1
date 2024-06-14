@@ -43,7 +43,7 @@
       hx-indicator="body"
       x-data="game"
     >
-      <div class="wrapper">
+      <div class="layer">
       <section id="board">
         <!--TILES -->
         <!-- SEA -->
@@ -147,13 +147,15 @@
         <i style="--x: -0.25; --y: 0.366" class="road3"></i>
       </section>
         </div>
-      <section>
+      
+      
+<!--       <section>
         <span class="icon exchange"></span>
-      </section>
-
-      <section>
+      </section> -->
+      
+      <div class="layer">
         <template x-for="(p, i) in players">
-          <div class="player">
+          <div class="player" :class="'player'+i">
             <div class="avatar">
               <img width="100%"  src="/avatar.svg" />
             </div>
@@ -193,7 +195,9 @@
             </i>
           </div>
         </template>
-      </section>
+      </div>
+      
+      
     </div>
   </body>
 </html>

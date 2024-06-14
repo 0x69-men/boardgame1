@@ -6,18 +6,16 @@ body,
     overflow: hidden;
 }
 
-#root {
-  position:relative;
-  background: #5290c1;
-  
-}
 
-.wrapper{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+#root {
+  display: grid;
+  grid-template: 1fr / 1fr;
+  place-items: center;
+  background: #5290c1;
+}
+#root > * {
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
 }
 
 #board {
@@ -172,10 +170,33 @@ i {
 
 /*Player Info*/
 .player {
-  position: relative;  
-  width: 200px;
-  height: 200px;
+  position: absolute;
+  --player-size: 25vmin;
+  width: var(--player-size);
+  height: var(--player-size);
 
+}
+
+.player.player0 {
+  left:20px;
+  top: 20px;
+}
+
+.player.player1 {
+  right:20px;
+  top: 20px;
+}
+
+
+.player.player2 {
+  right:20px;
+  bottom: 20px;
+}
+
+
+.player.player3 {
+  left:20px;
+  bottom: 20px;
 }
 
 .player .avatar,
@@ -195,7 +216,8 @@ i {
 }
 
 .player .avatar{
-  bottom:0;
+  bottom: 0;
+  width: 100%;
 }
 
 .player .name {
