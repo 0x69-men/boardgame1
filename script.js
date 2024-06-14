@@ -149,6 +149,8 @@ Alpine.data("game", () => ({
     ...Array(2).fill("Road Building"),
     ...Array(2).fill("Year of Plenty"),
   ],
+  
+  // ROADS - total 72 places
   /*
   
   X15-PerColor Road
