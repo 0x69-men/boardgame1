@@ -154,7 +154,6 @@ i {
   width: 200px;
   height: 200px;
   background:blue;
-  border-radius:50%;
 }
 
 .player .avatar,
@@ -169,6 +168,7 @@ i {
 .player .resource-cards {
   position: absolute;  
 }
+
 .player .avatar{
   bottom:0;
 }
