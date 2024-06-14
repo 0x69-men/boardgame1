@@ -168,15 +168,21 @@ i {
 .player .resource-cards {
   position: absolute;  
 }
+.player .name {
+  bottom:0;
+  left:50%;
+  transform:translate(-50%,-100%)
+}
 
 .player .roads,
 .player .villages,
 .player .cities,
 .player .development-cards,
-.player .resource-cards{  
+.player .resource-cards {  
   border: 2px black solid;
   border-radius:2;
 }
+
 
 .player .points,
 .player .longest-road,
@@ -218,9 +224,4 @@ i {
   text-shadow: 1px 1px 1px white;
   font-weight: 700;
   line-height: 1em;
-}
-
-
-.player.roads{
-  
 }
