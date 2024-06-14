@@ -153,7 +153,6 @@ i {
   position: relative;
   width: 200px;
   height: 200px;
-  background:blue;
 }
 
 .player .avatar,
@@ -187,30 +186,50 @@ i {
 .player .resource-cards {
   border: 2px black solid;
   background: white;
+  border-radius: 50%;
   right: 0;
-  width: 20px;
-  height: 20px;
+  transform: translate(50%, -50%);
+  --size: 15%;
+  width: var(--size);
+  height: var(--size);
+}
+
+.player .roads .text,
+.player .villages .text,
+.player .cities .text,
+.player .development-cards .text,
+.player .resource-cards .text{
+  position: absolute;
+  right: -100%;
+}
+
+.player .roads .icon,
+.player .villages .icon,
+.player .cities .icon,
+.player .development-cards .icon,
+.player .resource-cards .icon {
+  width: 80%; 
 }
 
 .player .roads{
-  top: 50%;
-  transform: translate(50%, -250%);
+  top: calc(50% - var(--size) * 2);
+/*   transform: translate(50%, -250%); */
 }
 .player .villages{
-  top: 50%;
-  transform: translate(50%, -150%);
+  top: calc(50% - var(--size));
+/*   transform: translate(50%, -150%); */
 }
 .player .cities{
   top: 50%;
-  transform: translate(50%, -50%);
+/*   transform: translate(50%, -50%); */
 }
 .player .development-cards{
-  top: 50%;
-  transform: translate(50%, 50%);
+  top: calc(50% + var(--size));
+/*   transform: translate(50%, 50%); */
 }
 .player .resource-cards {
-  top: 50%;
-  transform: translate(50%, 150%);
+  top: calc(50% + var(--size) * 2);
+/*   transform: translate(50%, 150%); */
 }
 
 
