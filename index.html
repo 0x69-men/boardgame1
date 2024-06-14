@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="https://glitch.com/favicon.ico" />
 
     <link rel="canonical" href="https://glitch-hello-website.glitch.me/" />
     <meta
-      name="description"
-      content="A simple website, built with Glitch. Remix it to get your own."
+            name="description"
+            content="A simple website, built with Glitch. Remix it to get your own."
     />
     <meta name="robots" content="index,follow" />
     <meta property="og:title" content="Hello World!" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://glitch-hello-website.glitch.me/" />
     <meta
-      property="og:description"
-      content="A simple website, built with Glitch. Remix it to get your own."
+            property="og:description"
+            content="A simple website, built with Glitch. Remix it to get your own."
     />
     <meta
-      property="og:image"
-      content="https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2Fhello-website-social.png?v=1616712748147"
+            property="og:image"
+            content="https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2Fhello-website-social.png?v=1616712748147"
     />
     <meta name="twitter:card" content="summary" />
 
@@ -31,173 +31,190 @@
 
     <!-- The website JavaScript file -->
     <script type="module" defer src="/script.js"></script>
-  </head>
-  <body>
-    <div
-      class="contents"
-      id="root"
-      hx-target="this"
-      hx-ext="alpine-morph"
-      hx-swap="morph"
-      hx-boost="true"
-      hx-indicator="body"
-      x-data="game"
-    >
-      <div class="layer">
-      <section id="board">
-        <!--TILES -->
-        <!-- SEA -->
-        <i style="--x: 0.5; --y: 2.25" class="tile Sea"></i>
-        <i style="--x: 1.5; --y: 2.25" class="tile Sea"></i>
-        <i style="--x: 2; --y: 1.5" class="tile Sea"></i>
-        <i style="--x: 2.5; --y: 0.75" class="tile Sea"></i>
-        <i style="--x: 3; --y: 0" class="tile Sea"></i>
-        <i style="--x: 2.5; --y: -0.75" class="tile Sea"></i>
-        <i style="--x: 2; --y: -1.5" class="tile Sea"></i>
-        <i style="--x: 1.5; --y: -2.25" class="tile Sea"></i>
-        <i style="--x: 0.5; --y: -2.25" class="tile Sea"></i>
-        <i style="--x: -0.5; --y: -2.25" class="tile Sea"></i>
-        <i style="--x: -1.5; --y: -2.25" class="tile Sea"></i>
-        <i style="--x: -2; --y: -1.5" class="tile Sea"></i>
-        <i style="--x: -2.5; --y: -0.75" class="tile Sea"></i>
-        <i style="--x: -3; --y: 0" class="tile Sea"></i>
-        <i style="--x: -2.5; --y: 0.75" class="tile Sea"></i>
-        <i style="--x: -2.5; --y: 0.75" class="tile Sea"></i>
-        <i style="--x: -2; --y: 1.5" class="tile Sea"></i>
-        <i style="--x: -1.5; --y: 2.25" class="tile Sea"></i>
-        <i style="--x: -0.5; --y: 2.25" class="tile Sea"></i>
+</head>
+<body>
+<div
+        class="contents"
+        id="root"
+        hx-target="this"
+        hx-ext="alpine-morph"
+        hx-swap="morph"
+        hx-boost="true"
+        hx-indicator="body"
+        x-data="game"
+>
+    <div class="layer">
+        <section id="board">
+            <!--TILES -->
+            <!-- SEA -->
+            <i style="--x: 0.5; --y: 2.25" class="tile Sea"></i>
+            <i style="--x: 1.5; --y: 2.25" class="tile Sea"></i>
+            <i style="--x: 2; --y: 1.5" class="tile Sea"></i>
+            <i style="--x: 2.5; --y: 0.75" class="tile Sea"></i>
+            <i style="--x: 3; --y: 0" class="tile Sea"></i>
+            <i style="--x: 2.5; --y: -0.75" class="tile Sea"></i>
+            <i style="--x: 2; --y: -1.5" class="tile Sea"></i>
+            <i style="--x: 1.5; --y: -2.25" class="tile Sea"></i>
+            <i style="--x: 0.5; --y: -2.25" class="tile Sea"></i>
+            <i style="--x: -0.5; --y: -2.25" class="tile Sea"></i>
+            <i style="--x: -1.5; --y: -2.25" class="tile Sea"></i>
+            <i style="--x: -2; --y: -1.5" class="tile Sea"></i>
+            <i style="--x: -2.5; --y: -0.75" class="tile Sea"></i>
+            <i style="--x: -3; --y: 0" class="tile Sea"></i>
+            <i style="--x: -2.5; --y: 0.75" class="tile Sea"></i>
+            <i style="--x: -2.5; --y: 0.75" class="tile Sea"></i>
+            <i style="--x: -2; --y: 1.5" class="tile Sea"></i>
+            <i style="--x: -1.5; --y: 2.25" class="tile Sea"></i>
+            <i style="--x: -0.5; --y: 2.25" class="tile Sea"></i>
 
-        <!-- Board -->
+            <!-- Board -->
 
-        <i style="--x: -1; --y: 1.5" class="tile" :class="tiles[0]"></i>
-        <i style="--x: 0; --y: 1.5" class="tile" :class="tiles[1]"></i>
-        <i style="--x: 1; --y: 1.5" class="tile" :class="tiles[2]"></i>
+            <i style="--x: -1; --y: 1.5" class="tile" :class="tiles[0]"></i>
+            <i style="--x: 0; --y: 1.5" class="tile" :class="tiles[1]"></i>
+            <i style="--x: 1; --y: 1.5" class="tile" :class="tiles[2]"></i>
 
-        <i style="--x: -1.5; --y: 0.75" class="tile" :class="tiles[3]"></i>
-        <i style="--x: -0.5; --y: 0.75" class="tile" :class="tiles[4]"></i>
-        <i style="--x: 0.5; --y: 0.75" class="tile" :class="tiles[5]"></i>
-        <i style="--x: 1.5; --y: 0.75" class="tile" :class="tiles[6]"></i>
+            <i style="--x: -1.5; --y: 0.75" class="tile" :class="tiles[3]"></i>
+            <i style="--x: -0.5; --y: 0.75" class="tile" :class="tiles[4]"></i>
+            <i style="--x: 0.5; --y: 0.75" class="tile" :class="tiles[5]"></i>
+            <i style="--x: 1.5; --y: 0.75" class="tile" :class="tiles[6]"></i>
 
-        <i style="--x: -2; --y: 0" class="tile" :class="tiles[7]"></i>
-        <i style="--x: -1; --y: 0" class="tile" :class="tiles[8]"></i>
-        <i style="--x: 0; --y: 0" class="tile" :class="tiles[9]"></i>
-        <i style="--x: 1; --y: 0" class="tile" :class="tiles[10]"></i>
-        <i style="--x: 2; --y: 0" class="tile" :class="tiles[11]"></i>
+            <i style="--x: -2; --y: 0" class="tile" :class="tiles[7]"></i>
+            <i style="--x: -1; --y: 0" class="tile" :class="tiles[8]"></i>
+            <i style="--x: 0; --y: 0" class="tile" :class="tiles[9]"></i>
+            <i style="--x: 1; --y: 0" class="tile" :class="tiles[10]"></i>
+            <i style="--x: 2; --y: 0" class="tile" :class="tiles[11]"></i>
 
-        <i style="--x: -1.5; --y: -0.75" class="tile" :class="tiles[12]"></i>
-        <i style="--x: -0.5; --y: -0.75" class="tile" :class="tiles[13]"></i>
-        <i style="--x: 0.5; --y: -0.75" class="tile" :class="tiles[14]"></i>
-        <i style="--x: 1.5; --y: -0.75" class="tile" :class="tiles[15]"></i>
+            <i style="--x: -1.5; --y: -0.75" class="tile" :class="tiles[12]"></i>
+            <i style="--x: -0.5; --y: -0.75" class="tile" :class="tiles[13]"></i>
+            <i style="--x: 0.5; --y: -0.75" class="tile" :class="tiles[14]"></i>
+            <i style="--x: 1.5; --y: -0.75" class="tile" :class="tiles[15]"></i>
 
-        <i style="--x: -1; --y: -1.5" class="tile" :class="tiles[16]"></i>
-        <i style="--x: 0; --y: -1.5" class="tile" :class="tiles[17]"></i>
-        <i style="--x: 1; --y: -1.5" class="tile" :class="tiles[18]"></i>
+            <i style="--x: -1; --y: -1.5" class="tile" :class="tiles[16]"></i>
+            <i style="--x: 0; --y: -1.5" class="tile" :class="tiles[17]"></i>
+            <i style="--x: 1; --y: -1.5" class="tile" :class="tiles[18]"></i>
 
-        <!-- Numbers -->
+            <!-- Numbers -->
 
-        <i style="--x: -1; --y: 1.5" class="number" x-text="numbers[0]"></i>
-        <i style="--x: 0; --y: 1.5" class="number" x-text="numbers[1]"></i>
-        <i style="--x: 1; --y: 1.5" class="number" x-text="numbers[2]"></i>
+            <i style="--x: -1; --y: 1.5" class="number" x-text="numbers[0]"></i>
+            <i style="--x: 0; --y: 1.5" class="number" x-text="numbers[1]"></i>
+            <i style="--x: 1; --y: 1.5" class="number" x-text="numbers[2]"></i>
 
-        <i style="--x: -1.5; --y: 0.75" class="number" x-text="numbers[3]"></i>
-        <i style="--x: -0.5; --y: 0.75" class="number" x-text="numbers[4]"></i>
-        <i style="--x: 0.5; --y: 0.75" class="number" x-text="numbers[5]"></i>
-        <i style="--x: 1.5; --y: 0.75" class="number" x-text="numbers[6]"></i>
+            <i style="--x: -1.5; --y: 0.75" class="number" x-text="numbers[3]"></i>
+            <i style="--x: -0.5; --y: 0.75" class="number" x-text="numbers[4]"></i>
+            <i style="--x: 0.5; --y: 0.75" class="number" x-text="numbers[5]"></i>
+            <i style="--x: 1.5; --y: 0.75" class="number" x-text="numbers[6]"></i>
 
-        <i style="--x: -2; --y: 0" class="number" x-text="numbers[7]"></i>
-        <i style="--x: -1; --y: 0" class="number" x-text="numbers[8]"></i>
-        <i style="--x: 0; --y: 0" class="number" x-text="numbers[9]"></i>
-        <i style="--x: 1; --y: 0" class="number" x-text="numbers[10]"></i>
-        <i style="--x: 2; --y: 0" class="number" x-text="numbers[11]"></i>
+            <i style="--x: -2; --y: 0" class="number" x-text="numbers[7]"></i>
+            <i style="--x: -1; --y: 0" class="number" x-text="numbers[8]"></i>
+            <i style="--x: 0; --y: 0" class="number" x-text="numbers[9]"></i>
+            <i style="--x: 1; --y: 0" class="number" x-text="numbers[10]"></i>
+            <i style="--x: 2; --y: 0" class="number" x-text="numbers[11]"></i>
 
-        <i
-          style="--x: -1.5; --y: -0.75"
-          class="number"
-          x-text="numbers[12]"
-        ></i>
-        <i
-          style="--x: -0.5; --y: -0.75"
-          class="number"
-          x-text="numbers[13]"
-        ></i>
-        <i style="--x: 0.5; --y: -0.75" class="number" x-text="numbers[14]"></i>
-        <i style="--x: 1.5; --y: -0.75" class="number" x-text="numbers[15]"></i>
+            <i
+                    style="--x: -1.5; --y: -0.75"
+                    class="number"
+                    x-text="numbers[12]"
+            ></i>
+            <i
+                    style="--x: -0.5; --y: -0.75"
+                    class="number"
+                    x-text="numbers[13]"
+            ></i>
+            <i style="--x: 0.5; --y: -0.75" class="number" x-text="numbers[14]"></i>
+            <i style="--x: 1.5; --y: -0.75" class="number" x-text="numbers[15]"></i>
 
-        <i style="--x: -1; --y: -1.5" class="number" x-text="numbers[16]"></i>
-        <i style="--x: 0; --y: -1.5" class="number" x-text="numbers[17]"></i>
-        <i style="--x: 1; --y: -1.5" class="number" x-text="numbers[18]"></i>
+            <i style="--x: -1; --y: -1.5" class="number" x-text="numbers[16]"></i>
+            <i style="--x: 0; --y: -1.5" class="number" x-text="numbers[17]"></i>
+            <i style="--x: 1; --y: -1.5" class="number" x-text="numbers[18]"></i>
 
-        <i style="--x: 1; --y: -1.5" class="number"
-          ><i class="icon bandit"></i
-        ></i>
-        <!-- Houses -->
-        <i style="--x: 0; --y: -0.5" class="house"></i>
-        <i style="--x: 0.5; --y: -0.25" class="house"></i>
-        <i style="--x: 0.5; --y: 0.25" class="house"></i>
-        <i style="--x: 0; --y: 0.5" class="house"></i>
-        <i style="--x: -0.5; --y: -0.25" class="house"></i>
-        <i style="--x: -0.5; --y: 0.25" class="house"></i>
-        <!-- .... -->
-        <!-- Roads -->
-        <i style="--x: 0.25; --y: 0.366" class="road1"></i>
-        <i style="--x: 0.5; --y: 0" class="road2"></i>
-        <i style="--x: 0.25; --y: -0.366" class="road3"></i>
-        <i style="--x: -0.25; --y: -0.366" class="road1"></i>
-        <i style="--x: -0.5; --y: 0" class="road2"></i>
-        <i style="--x: -0.25; --y: 0.366" class="road3"></i>
-      </section>
-        </div>
-      
-      
-<!--       <section>
-        <span class="icon exchange"></span>
-      </section> -->
-      
-      <div class="layer">
-        <template x-for="(p, i) in players">
-          <div class="player" :class="'player'+i">
-            <div class="avatar">
-              <img width="100%"  src="/avatar.svg" />
-            </div>
-            
-            <i class="name" x-text="p.name"></i>
-            <i class="points">
-              <span class="icon trophy"></span>
-              <span class="text" x-text="p.points"></span>
-            </i>
-            <i class="longest-road">
-              <span class="icon logn-road"></span>
-            </i>
-            <i class="largest-army">
-              <span class="icon army"></span>
-            </i>
-            
-            <i class="roads">
-              <span class="icon road"></span>
-              <span class="text" x-text="p.roads.length"> </span>
-            </i>
-            
-            <i class="development-cards">
-              <span class="icon card-pack"></span>
-              <span class="text" x-text="p.developmentCards.length"></span>
-            </i>
-            <i class="resource-cards">
-              <span class="icon card-pack"></span>
-              <span class="text" x-text="p.resources"></span>
-            </i>
-            <i class="villages">
-              <span class="icon village"></span>
-              <span class="text" x-text="p.villages.length"></span>
-            </i>
-            <i class="cities">
-              <span class="icon city"></span>
-              <span class="text" x-text="p.cities.length"></span>
-            </i>
-          </div>
-        </template>
-      </div>
-      
-      
+            <i style="--x: 1; --y: -1.5" class="number"
+            ><i class="icon bandit"></i
+                ></i>
+            <!-- Houses -->
+            <i style="--x: 0; --y: -0.5" class="house"></i>
+            <i style="--x: 0.5; --y: -0.25" class="house"></i>
+            <i style="--x: 0.5; --y: 0.25" class="house"></i>
+            <i style="--x: 0; --y: 0.5" class="house"></i>
+            <i style="--x: -0.5; --y: -0.25" class="house"></i>
+            <i style="--x: -0.5; --y: 0.25" class="house"></i>
+            <!-- .... -->
+            <!-- Roads -->
+<!--             <i style="--x: 0.25; --y: 0.366" class="road1"></i>
+            <i style="--x: 0.5; --y: 0" class="road2"></i>
+            <i style="--x: 0.25; --y: -0.366" class="road3"></i>
+            <i style="--x: -0.25; --y: -0.366" class="road1"></i>
+            <i style="--x: -0.5; --y: 0" class="road2"></i>
+            <i style="--x: -0.25; --y: 0.366" class="road3"></i> -->
+          
+          
+          <i style="--x: -1.25; --y: 1.866" class="road3"></i>
+          <i style="--x: -0.75; --y: 1.866" class="road1"></i>
+          <i style="--x: -0.25; --y: 1.866" class="road3"></i>
+          <i style="--x: 0.25; --y: 1.866" class="road1"></i>
+          <i style="--x: 0.75; --y: 1.866" class="road3"></i>
+          <i style="--x: 1.25; --y: 1.866" class="road1"></i>
+          
+          <i style="--x: -1.5; --y: 1.5" class="road2"></i>
+          <i style="--x: -0.5; --y: 1.5" class="road2"></i>
+          <i style="--x: 0.5; --y: 1.5" class="road2"></i>
+          <i style="--x: 1.5; --y: 1.5" class="road2"></i>
+          
+          <i style="--x: -1.5; --y: .5" class="road2"></i>
+          <i style="--x: -0.5; --y: 1.5" class="road2"></i>
+          <i style="--x: 0.5; --y: 1.5" class="road2"></i>
+          <i style="--x: 1.5; --y: 1.5" class="road2"></i>
+          
+          
+        </section>
     </div>
-  </body>
+    <div class="layer">
+        <template x-for="(p, i) in players">
+            <div class="player" :class="'player'+i">
+                <div class="avatar">
+                    <img width="100%" src="/avatar.svg" />
+                </div>
+
+                <i class="name" x-text="p.name"></i>
+                <i class="points">
+                    <span class="icon trophy"></span>
+                    <span class="text" x-text="p.points"></span>
+                </i>
+                <i class="longest-road">
+                    <span class="icon logn-road"></span>
+                </i>
+                <i class="largest-army">
+                    <span class="icon army"></span>
+                </i>
+
+                <i class="roads">
+                    <span class="icon road"></span>
+                    <span class="text" x-text="p.roads.length"> </span>
+                </i>
+
+                <i class="development-cards">
+                    <span class="icon card-pack"></span>
+                    <span class="text" x-text="p.developmentCards.length"></span>
+                </i>
+                <i class="resource-cards">
+                    <span class="icon card-pack"></span>
+                    <span class="text" x-text="p.resources"></span>
+                </i>
+                <i class="villages">
+                    <span class="icon village"></span>
+                    <span class="text" x-text="p.villages.length"></span>
+                </i>
+                <i class="cities">
+                    <span class="icon city"></span>
+                    <span class="text" x-text="p.cities.length"></span>
+                </i>
+            </div>
+        </template>
+    </div>
+    <div class="layer">
+      <section>
+        <span class="icon exchange"></span>
+      </section>
+  </div>
+</div>
+</body>
 </html>
