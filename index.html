@@ -152,7 +152,10 @@
       <section>
         <template x-for="(p, i) in players">
           <div class="player">
-            <!--             <img class="avatar" src="/avatar.svg" /> -->
+            <div class="avatar">
+              <img width="100%"  src="/avatar.svg" />
+            </div>
+            
             <i class="name" x-text="p.name"></i>
             <i class="points">
               <span class="icon trophy"></span>

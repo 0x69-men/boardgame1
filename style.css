@@ -157,6 +157,7 @@ i {
   border-radius:50%;
 }
 
+.player .avatar,
 .player .name,
 .player .points,
 .player .longest-road,
@@ -168,21 +169,37 @@ i {
 .player .resource-cards {
   position: absolute;  
 }
+.player .avatar{
+  bottom:0;
+}
+
 .player .name {
   bottom:0;
   left:50%;
-  transform:translate(-50%,100%)
-  
+  transform:translate(-50%,100%);
+  text-shadow: white 1px 1px;
 }
 
 .player .roads,
 .player .villages,
 .player .cities,
 .player .development-cards,
-.player .resource-cards {  
+.player .resource-cards {
   border: 2px black solid;
-  border-radius:2;
+  background: white;
+  right: 0;
+  border-radius: 2;
+  aspect-ratio: 1;
 }
+
+.player .roads{}
+.player .villages{}
+.player .cities{
+  top: 50%;
+  transform: translate(50%, -50%);
+}
+.player .development-cards{}
+.player .resource-cards {}
 
 
 .player .points,
