@@ -95,6 +95,15 @@ i {
   --icon-url: url("icon.svg#trade");
 }
 
+.icon.resources {
+  --icon-url: url("icon.svg#resources");
+}
+
+
+.icon.resources {
+  --icon-url: url("icon.svg#resources");
+}
+
 .tile {
   position: absolute;
   background-image: url("/tile.svg");
