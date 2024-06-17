@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="https://glitch.com/favicon.ico" />
 
     <link rel="canonical" href="https://glitch-hello-website.glitch.me/" />
     <meta
-            name="description"
-            content="A simple website, built with Glitch. Remix it to get your own."
+      name="description"
+      content="A simple website, built with Glitch. Remix it to get your own."
     />
     <meta name="robots" content="index,follow" />
     <meta property="og:title" content="Hello World!" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://glitch-hello-website.glitch.me/" />
     <meta
-            property="og:description"
-            content="A simple website, built with Glitch. Remix it to get your own."
+      property="og:description"
+      content="A simple website, built with Glitch. Remix it to get your own."
     />
     <meta
-            property="og:image"
-            content="https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2Fhello-website-social.png?v=1616712748147"
+      property="og:image"
+      content="https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2Fhello-website-social.png?v=1616712748147"
     />
     <meta name="twitter:card" content="summary" />
 
@@ -31,21 +31,29 @@
 
     <!-- The website JavaScript file -->
     <script type="module" defer src="/script.js"></script>
-</head>
-<body>
-  <div
-        class="contents"
-        id="root"
-        hx-target="this"
-        hx-ext="alpine-morph"
-        hx-swap="morph"
-        hx-boost="true"
-        hx-indicator="body"
-        x-data="game"
->
-    <div class="layer dialog">
-      
+  </head>
+  <body>
+    <div
+      class="contents"
+      id="root"
+      hx-target="this"
+      hx-ext="alpine-morph"
+      hx-swap="morph"
+      hx-boost="true"
+      hx-indicator="body"
+      x-data="game"
+    >
+      <section>
+        <div class="layer dialog">
+          <i class="icon knight"></i>
+          <i class="icon roll-dices"></i>
+        </div>
+        
+        <div class="layer dialog">
+          <i class="icon build"></i>
+          <i class="icon trade"></i>
+        </div>
+      </section>
     </div>
-  </div>
   </body>
 </html>

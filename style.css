@@ -33,7 +33,7 @@ i {
   box-sizing: border-box;
 }
 
-.layer.dialog{
+.layer.dialog {
   display: flex;
   align-items: center;
   justify-content: center;  
@@ -77,6 +77,22 @@ i {
 }
 .icon.card-pack {
   --icon-url: url("icon.svg#card-pack");
+}
+
+.icon.roll-dices {
+  --icon-url: url("icon.svg#roll-dices");
+}
+
+.icon.build {
+  --icon-url: url("icon.svg#build");
+}
+
+.icon.knight {
+  --icon-url: url("icon.svg#knight");
+}
+
+.icon.trade {
+  --icon-url: url("icon.svg#trade");
 }
 
 .tile {
