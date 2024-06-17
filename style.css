@@ -100,8 +100,8 @@ i {
 }
 
 
-.icon.resources {
-  --icon-url: url("icon.svg#resources");
+.icon.development {
+  --icon-url: url("icon.svg#development");
 }
 
 .tile {
