@@ -33,6 +33,12 @@ i {
   box-sizing: border-box;
 }
 
+.layer.dialog{
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+}
+
 .icon {
   display: inline-block;
   min-width: 1em;

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+
+    <link rel="canonical" href="https://glitch-hello-website.glitch.me/" />
+    <meta
+            name="description"
+            content="A simple website, built with Glitch. Remix it to get your own."
+    />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:title" content="Hello World!" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://glitch-hello-website.glitch.me/" />
+    <meta
+            property="og:description"
+            content="A simple website, built with Glitch. Remix it to get your own."
+    />
+    <meta
+            property="og:image"
+            content="https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2Fhello-website-social.png?v=1616712748147"
+    />
+    <meta name="twitter:card" content="summary" />
+
+    <title>Hello World!</title>
+    <link rel="stylesheet" href="/reset.css" />
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/vendor/htmx@1.9.12.min.js"></script>
+
+    <!-- The website JavaScript file -->
+    <script type="module" defer src="/script.js"></script>
+</head>
+<body>
+  <div
+        class="contents"
+        id="root"
+        hx-target="this"
+        hx-ext="alpine-morph"
+        hx-swap="morph"
+        hx-boost="true"
+        hx-indicator="body"
+        x-data="game"
+>
+    <div class="layer dialog">
+      
+    </div>
+  </div>
+  </body>
+</html>
