@@ -353,26 +353,15 @@ i {
 
 /*Button Magic*/
 
-html,
-body {
-  min-height: 100%;
-}
-
-body {
-  background-image: linear-gradient(top, #edecec, #cecbc9);
-}
 .dialog{
-  background-image: linear-gradient(top, #edecec, #cecbc9);
+  background-image: linear-gradient(180deg, #edecec, #cecbc9);
 }
 
-.buttonHolder {
-  margin: 80px auto;
-  width: 400px;
-}
 
-.button {
-  background-image: -webkit-linear-gradient(top, #f4f1ee, #fff);
-  background-image: linear-gradient(top, #f4f1ee, #fff);
+button, .button {
+  appearance: none;
+  border: none;
+  background-image: linear-gradient(180deg, #f4f1ee, #ffffff);
   border-radius: 50%;
   box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.3), inset 0px 4px 1px 1px white,
     inset 0px -3px 1px 1px rgba(204, 198, 197, 0.5);
@@ -381,11 +370,12 @@ body {
   margin: 0 30px 30px 0;
   position: relative;
   width: 70px;
-  -webkit-transition: all 0.1s linear;
   transition: all 0.1s linear;
+  display:flex;
+  padding: 3%;
 }
 
-.button:after {
+/* .button:after {
   color: #e9e6e4;
   content: "";
   display: block;
@@ -395,8 +385,8 @@ body {
   text-shadow: 0px -1px 1px #bdb5b4, 1px 1px 1px white;
   position: absolute;
   width: 30px;
-}
-
+} */
+/* 
 .heart:after {
   content: "❤";
   left: 21px;
@@ -422,7 +412,7 @@ body {
 }
 
 .button:hover {
-  background-image: linear-gradient(top, #fff, #f4f1ee);
+  background-image: linear-gradient(180deg, #ffffff, #f4f1ee);
   color: #0088cc;
 }
 
@@ -444,16 +434,16 @@ body {
 .cross:hover:after {
   color: #eb2f2f;
   text-shadow: 0px 0px 6px #eb2f2f;
-}
+} */
 
-.button:active {
+button:active {
   background-image: -webkit-linear-gradient(top, #efedec, #f7f4f4);
   background-image: linear-gradient(top, #efedec, #f7f4f4);
   box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.4),
     inset 0px -3px 1px 1px rgba(204, 198, 197, 0.5);
 }
 
-.button:active:after {
+button:active:after {
   color: #dbd2d2;
   text-shadow: 0px -1px 1px #bdb5b4, 0px 1px 1px white;
 }
