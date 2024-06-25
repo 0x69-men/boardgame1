@@ -348,6 +348,9 @@ i {
 
 /*Button Magic*/
 
+[class^="dialog-action"] {
+  background:red
+}
 
 .dialog {
   position: relative;

@@ -43,12 +43,17 @@ Alpine.data("game", () => ({
     ],
     players: [],
     dialogue: {
-      ["@next-turn"](){
-       console.log('next-turn was dispatched') 
-      },
-      ["@play-knight"](){
-       console.log('play-knight was dispatched', this.data.test)
-      },      
+    ["@play-knight"]() {console.log("play-knight")},
+    ["@start-turn"]() {console.log("start-turn")},
+    ["@action-build"]() {console.log("action-build")},
+    ["@action-exchange"]() {console.log("action-exchange")},
+    ["@action-development"]() {console.log("action-development")},
+    ["@action-trade"]() {console.log("action-trade")},
+    ["@action-end-turn"]() {console.log("action-end-turn")},
+    ["@build-road"](){console.log("@build-road")},
+    ["@build-village"](){console.log("@build-village")},
+    ["@build-city"](){console.log("@build-city")},
+    ["@build-development"](){console.log("@build-development")},
       // document.gendersForm.gender.value="F";
     }
   },

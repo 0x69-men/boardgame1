@@ -325,12 +325,25 @@
     </div>
     <div class="layer dialog">
       <form name="selectDialog" x-bind="el.dialogue">
-      <input type="radio" name="dialog" vlaue="1">
-      <input type="radio" name="dialog" vlaue="2">
-      <input type="radio" name="dialog" vlaue="3">
-      <div class="dialog1">
+      <input type="radio" name="dialog" vlaue="start">
+      <input type="radio" name="dialog" vlaue="action">
+      <input type="radio" name="dialog" vlaue="build">
+      <div class="dialog-start">
           <button type="button" @click="$dispatch('play-knight')"><i class="icon knight"></i></button>
-          <button type="button" @click="$dispatch('next-turn')"><i class="icon roll-dices"></i></button>
+          <button type="button" @click="$dispatch('start-turn')"><i class="icon roll-dices"></i></button>
+      </div>
+      <div class="dialog-action">
+          <button type="button" @click="$dispatch('action-build')"><i class="icon build"></i></button>
+          <button type="button" @click="$dispatch('action-exchange')"><i class="icon exchange"></i></button>
+          <button type="button" @click="$dispatch('action-development')"><i class="icon development"></i></button>
+          <button type="button" @click="$dispatch('action-trade')"><i class="icon trade"></i></button>
+          <button type="button" @click="$dispatch('action-end-turn')"><i class="icon end-turn"></i></button>
+      </div>
+      <div class="dialog-build">
+          <button type="button" @click="$dispatch('build-road')"><i class="icon road"></i></button>
+          <button type="button" @click="$dispatch('build-village')"><i class="icon village"></i></button>
+          <button type="button" @click="$dispatch('build-city')"><i class="icon city"></i></button>
+          <button type="button" @click="$dispatch('build-development')"><i class="icon development"></i></button>
       </div>
       </form>
     </div>
