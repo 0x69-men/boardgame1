@@ -34,6 +34,14 @@ window.htmx.defineExtension("alpine-morph", {
 });
 
 Alpine.data("game", () => ({
+  data:{},
+  el: {
+    roads:[
+      {[":class"]:"'AAA'"}
+    ]
+  },
+  
+  
   playerColors: [
     "#DE9EB5",
     "#CF6A6B",
@@ -184,14 +192,14 @@ Alpine.data("game", () => ({
 
 Alpine.start();
 
-const qrcode = new QRCode("player-QR", {
-  text: "https://gugu-catan.glitch.me/",
-  width: 128,
-  height: 128,
-  colorDark: "#000000",
-  colorLight: "#ffffff",
-  correctLevel: QRCode.CorrectLevel.H,
-});
+// const qrcode = new QRCode("player-QR", {
+//   text: "https://gugu-catan.glitch.me/",
+//   width: 128,
+//   height: 128,
+//   colorDark: "#000000",
+//   colorLight: "#ffffff",
+//   correctLevel: QRCode.CorrectLevel.H,
+// });
 
 // console.log(qrcode);
 
