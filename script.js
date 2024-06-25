@@ -40,6 +40,9 @@ Alpine.data("game", () => ({
       {[":class"]: "'AAA'"}
     ],
     players: [],
+    dialogue: {
+      
+    }
   },
   
   playerColors: [

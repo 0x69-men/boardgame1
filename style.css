@@ -32,11 +32,6 @@ i {
   box-sizing: border-box;
 }
 
-.layer.dialog {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 .icon {
   display: inline-block;
@@ -353,7 +348,12 @@ i {
 
 /*Button Magic*/
 
-.dialog{
+
+.dialog {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 10px;
   background-image: linear-gradient(180deg, #edecec, #cecbc9);
 }
@@ -393,8 +393,8 @@ button:active:after {
 
 
 
-/*THE DIALOG 2*/ 
 
+/*THE DIALOG 2*/ 
 
 
 .container-inner {
