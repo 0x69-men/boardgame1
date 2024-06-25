@@ -34,7 +34,7 @@ window.htmx.defineExtension("alpine-morph", {
 });
 
 Alpine.data("game", () => ({
-  data:{},
+  data: {},
   el: {
     roads:[
       {[":class"]:"'AAA'"}
