@@ -348,9 +348,26 @@ i {
 
 /*Button Magic*/
 
-[class^="dialog-action"] {
-  background:red
+[class^="dialog-"] {
+  display:none;
 }
+
+input[type=radio]:checked {
+  background:red;
+  border:red;
+}
+/* 
+[value="start"]:checked ~ .dialog-start{
+  display:block
+}
+ */
+
+input:checked ~ .dialog-start{
+  display:block
+}
+
+
+
 
 .dialog {
   position: relative;
