@@ -37,10 +37,10 @@ Alpine.data("game", () => ({
   data: {},
   el: {
     roads:[
-      {[":class"]:"'AAA'"}
-    ]
+      {[":class"]: "'AAA'"}
+    ],
+    players: [],
   },
-  
   
   playerColors: [
     "#DE9EB5",
