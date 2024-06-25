@@ -324,8 +324,15 @@
         </template>
     </div>
     <div class="layer dialog">
-      <input type=radio" name=
-      <div x-bind="el.dialogue" class="dialog1">Im dialgue</div>
+      <form name="selectDialog" x-bind="el.dialogue">
+      <input type="radio" name="dialog" vlaue="1">
+      <input type="radio" name="dialog" vlaue="2">
+      <input type="radio" name="dialog" vlaue="3">
+      <div class="dialog1">
+          <button type="button" @click="$dispatch('play-knight')"><i class="icon knight"></i></button>
+          <button type="button" @click="$dispatch('next-turn')"><i class="icon roll-dices"></i></button>
+      </div>
+      </form>
     </div>
 </div>
 </body>

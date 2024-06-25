@@ -34,14 +34,22 @@ window.htmx.defineExtension("alpine-morph", {
 });
 
 Alpine.data("game", () => ({
-  data: {},
+  data: {
+    test:111,
+  },
   el: {
     roads:[
-      {[":class"]: "'AAA'"}
+      ...Array(72).fill({[":class"]: "'AAA'"})
     ],
     players: [],
     dialogue: {
-      
+      ["@next-turn"](){
+       console.log('next-turn was dispatched') 
+      },
+      ["@play-knight"](){
+       console.log('play-knight was dispatched', this.data.test)
+      },      
+      // document.gendersForm.gender.value="F";
     }
   },
   
