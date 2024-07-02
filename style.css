@@ -348,26 +348,28 @@ i {
 
 /*Button Magic*/
 
-[class^="dialog-"] {
+.dialog-start,.dialog-action,.dialog-build  {
   display:none;
 }
 
-input[type=radio]:checked {
-  background:red;
-  border:red;
-}
 /* 
 [value="start"]:checked ~ .dialog-start{
   display:block
 }
  */
 
-input:checked ~ .dialog-start{
+input[vlaue="start"]:checked ~ .dialog-start {
   display:block
 }
 
 
+input[vlaue="action"]:checked ~ .dialog-action {
+  display:block
+}
 
+input[vlaue="build"]:checked ~ .dialog-build {
+  display:block
+}
 
 .dialog {
   position: relative;

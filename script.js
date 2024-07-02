@@ -35,29 +35,53 @@ window.htmx.defineExtension("alpine-morph", {
 
 Alpine.data("game", () => ({
   data: {
-    test:111,
+    test: 111,
   },
   el: {
-    roads:[
-      ...Array(72).fill({[":class"]: "'AAA'"})
-    ],
+    roads: [...Array(72).fill({ [":class"]: "'AAA'" })],
     players: [],
     dialogue: {
-    ["@play-knight"]() {console.log("play-knight")},
-    ["@start-turn"]() {console.log("start-turn")},
-    ["@action-build"]() {console.log("action-build")},
-    ["@action-exchange"]() {console.log("action-exchange")},
-    ["@action-development"]() {console.log("action-development")},
-    ["@action-trade"]() {console.log("action-trade")},
-    ["@action-end-turn"]() {console.log("action-end-turn")},
-    ["@build-road"](){console.log("@build-road")},
-    ["@build-village"](){console.log("@build-village")},
-    ["@build-city"](){console.log("@build-city")},
-    ["@build-development"](){console.log("@build-development")},
+      // init() {
+      //   document.selectDialog.dialog.value = "build";
+      //   console.log(document.selectDialog.dialog);
+      // },
+      ["@play-knight"]() {
+        console.log("play-knight");
+      },
+      ["@start-turn"]() {
+        console.log("start-turn");
+      },
+      ["@action-build"]() {
+        console.log("action-build");
+      },
+      ["@action-exchange"]() {
+        console.log("action-exchange");
+      },
+      ["@action-development"]() {
+        console.log("action-development");
+      },
+      ["@action-trade"]() {
+        console.log("action-trade");
+      },
+      ["@action-end-turn"]() {
+        console.log("action-end-turn");
+      },
+      ["@build-road"]() {
+        console.log("@build-road");
+      },
+      ["@build-village"]() {
+        console.log("@build-village");
+      },
+      ["@build-city"]() {
+        console.log("@build-city");
+      },
+      ["@build-development"]() {
+        console.log("@build-development");
+      },
       // document.gendersForm.gender.value="F";
-    }
+    },
   },
-  
+
   playerColors: [
     "#DE9EB5",
     "#CF6A6B",
@@ -88,18 +112,19 @@ Alpine.data("game", () => ({
       villages: [1, 2, 3, 4, 5],
       cities: [1, 3, 5, 8],
       get points() {
-        return 44
+        return 44;
       },
       get resources() {
-        return this.resourcesCards.Brick
-         +this.resourcesCards.Wool 
-        +this.resourcesCards.Ore 
-        +this.resourcesCards.Grain 
-        +this.resourcesCards.Lumber
-        
+        return (
+          this.resourcesCards.Brick +
+          this.resourcesCards.Wool +
+          this.resourcesCards.Ore +
+          this.resourcesCards.Grain +
+          this.resourcesCards.Lumber
+        );
       },
     },
-        {
+    {
       name: "Kalabibishkis",
       avatar: 123, //"add https://github.com/fangpenlin/avataaars",
       developmentCards: ["Knight", "Knight", "Knight"],
@@ -108,18 +133,19 @@ Alpine.data("game", () => ({
       villages: [1, 2, 3, 4, 5],
       cities: [1, 3, 5, 8],
       get points() {
-        return 44
+        return 44;
       },
       get resources() {
-        return this.resourcesCards.Brick
-         +this.resourcesCards.Wool 
-        +this.resourcesCards.Ore 
-        +this.resourcesCards.Grain 
-        +this.resourcesCards.Lumber
-        
+        return (
+          this.resourcesCards.Brick +
+          this.resourcesCards.Wool +
+          this.resourcesCards.Ore +
+          this.resourcesCards.Grain +
+          this.resourcesCards.Lumber
+        );
       },
     },
-        {
+    {
       name: "Kalabibishkis",
       avatar: 123, //"add https://github.com/fangpenlin/avataaars",
       developmentCards: ["Knight", "Knight", "Knight"],
@@ -128,18 +154,19 @@ Alpine.data("game", () => ({
       villages: [1, 2, 3, 4, 5],
       cities: [1, 3, 5, 8],
       get points() {
-        return 44
+        return 44;
       },
       get resources() {
-        return this.resourcesCards.Brick
-         +this.resourcesCards.Wool 
-        +this.resourcesCards.Ore 
-        +this.resourcesCards.Grain 
-        +this.resourcesCards.Lumber
-        
+        return (
+          this.resourcesCards.Brick +
+          this.resourcesCards.Wool +
+          this.resourcesCards.Ore +
+          this.resourcesCards.Grain +
+          this.resourcesCards.Lumber
+        );
       },
     },
-        {
+    {
       name: "Kalabibishkis",
       avatar: 123, //"add https://github.com/fangpenlin/avataaars",
       developmentCards: ["Knight", "Knight", "Knight"],
@@ -148,15 +175,16 @@ Alpine.data("game", () => ({
       villages: [1, 2, 3, 4, 5],
       cities: [1, 3, 5, 8],
       get points() {
-        return 44
+        return 44;
       },
       get resources() {
-        return this.resourcesCards.Brick
-         +this.resourcesCards.Wool 
-        +this.resourcesCards.Ore 
-        +this.resourcesCards.Grain 
-        +this.resourcesCards.Lumber
-        
+        return (
+          this.resourcesCards.Brick +
+          this.resourcesCards.Wool +
+          this.resourcesCards.Ore +
+          this.resourcesCards.Grain +
+          this.resourcesCards.Lumber
+        );
       },
     },
   ],
@@ -173,7 +201,7 @@ Alpine.data("game", () => ({
     ...Array(2).fill("Road Building"),
     ...Array(2).fill("Year of Plenty"),
   ],
-  
+
   // ROADS - total 72 places
   /*
   
