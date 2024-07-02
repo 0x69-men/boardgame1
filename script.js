@@ -64,7 +64,8 @@ Alpine.data("game", () => ({
       ["@start-turn"]() {
         this.data.dices[0] = this.data.seed.next32() % 6 + 1
         this.data.dices[1] = this.data.seed.next32() % 6 + 1
-        console.log("start-turn", );
+        
+        console.log("start-turn");
       },
       ["@action-build"]() {
         console.log("action-build");
