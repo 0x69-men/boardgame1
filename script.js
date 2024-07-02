@@ -36,7 +36,7 @@ window.htmx.defineExtension("alpine-morph", {
 
 Alpine.data("game", () => ({
   data: {
-    seed: new PcgRandom(),
+    seed: new PcgRandom(42n),
     dices: [1, 1],
   },
   el: {
