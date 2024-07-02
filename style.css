@@ -112,6 +112,10 @@ i {
   --icon-url: url("icon.svg#end-turn");
 }
 
+.icon.back {
+  --icon-url: url("icon.svg#back");
+}
+
 .tile {
   position: absolute;
   background-image: url("/tile.svg");
@@ -208,10 +212,15 @@ i {
 
 /*Player Info*/
 .player {
+  border-radius:50%;
   position: absolute;
   --player-size: 25vmin;
   width: var(--player-size);
   height: var(--player-size);
+}
+
+.player.active{
+  box-shadow: 10px 5px 5px red;  
 }
 
 .player.player0 {

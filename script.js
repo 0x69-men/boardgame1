@@ -41,7 +41,9 @@ Alpine.data("game", () => ({
   },
   el: {
     roads: [...Array(72).fill({ [":class"]: "'AAA'" })],
-    players: [],
+    players: [{
+      [""]
+    }],
     dices: {
       ["x-show"]() {
         return this.data.dices[0] + this.data.dices[1] > 0;
@@ -62,12 +64,14 @@ Alpine.data("game", () => ({
         console.log("play-knight");
       },
       ["@start-turn"]() {
+        this.$el.dialog.value="action"
         this.data.dices[0] = this.data.seed.next32() % 6 + 1
         this.data.dices[1] = this.data.seed.next32() % 6 + 1
         
         console.log("start-turn");
       },
       ["@action-build"]() {
+        this.$el.dialog.value="build"
         console.log("action-build");
       },
       ["@action-exchange"]() {
@@ -81,6 +85,10 @@ Alpine.data("game", () => ({
       },
       ["@action-end-turn"]() {
         console.log("action-end-turn");
+      },
+      ["@build-back"]() {
+        this.$el.dialog.value="action"
+        console.log("@build-back");
       },
       ["@build-road"]() {
         console.log("@build-road");
