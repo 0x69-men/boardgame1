@@ -40,6 +40,9 @@ Alpine.data("game", () => ({
   el: {
     roads: [...Array(72).fill({ [":class"]: "'AAA'" })],
     players: [],
+    dices: {
+      [":class"]()"hidden"
+    },
     dialogue: {
       ["@play-knight"]() {
         console.log("play-knight");
