@@ -2,7 +2,9 @@ import { Alpine } from "/vendor/alpinejs@3.14.0.esm.js";
 
 import morph from "/vendor/morph@3.14.0.esm.js";
 import { QRCode } from "/vendor/qrcode.js";
+import { PcgRandom } from "/vendor/pcg.js";
 
+window.PcgRandom = PcgRandom;
 window.Alpine = Alpine;
 
 Alpine.plugin(morph);
@@ -36,17 +38,24 @@ window.htmx.defineExtension("alpine-morph", {
 Alpine.data("game", () => ({
   data: {
     test: 111,
-    dices: [3,5],
+    dices: [6, 1],
   },
   el: {
     roads: [...Array(72).fill({ [":class"]: "'AAA'" })],
     players: [],
     dices: {
-      ["x-show"](){
-        return this.dices[0] && this.dices[1]
+      ["x-show"]() {
+        return this.data.dices[0] + this.data.dices[1] > 0;
       },
-      [":class"](){
-        return `show-${this.dices[0]} show-${this.dices[1]}`
+    },
+    dice1: {
+      [":class"]() {
+        return `show-${this.data.dices[0]} `;
+      },
+    },
+    dice2: {
+      [":class"]() {
+        return `show-${this.data.dices[1]} `;
       },
     },
     dialogue: {
@@ -54,7 +63,7 @@ Alpine.data("game", () => ({
         console.log("play-knight");
       },
       ["@start-turn"]() {
-        this.data.showDices=true
+        this.data.showDices = true;
         console.log("start-turn", this.el.dices);
       },
       ["@action-build"]() {

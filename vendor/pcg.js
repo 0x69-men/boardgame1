@@ -344,3 +344,5 @@ var PcgRandom = (function () {
 if (typeof module !== "undefined" && module.exports) {
   module.exports = PcgRandom;
 }
+
+export {PcgRandom};
