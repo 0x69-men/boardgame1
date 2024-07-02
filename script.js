@@ -41,10 +41,6 @@ Alpine.data("game", () => ({
     roads: [...Array(72).fill({ [":class"]: "'AAA'" })],
     players: [],
     dialogue: {
-      // init() {
-      //   document.selectDialog.dialog.value = "build";
-      //   console.log(document.selectDialog.dialog);
-      // },
       ["@play-knight"]() {
         console.log("play-knight");
       },

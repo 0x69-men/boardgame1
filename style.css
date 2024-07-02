@@ -352,22 +352,17 @@ i {
   display:none;
 }
 
-/* 
-[value="start"]:checked ~ .dialog-start{
-  display:block
-}
- */
 
-input[vlaue="start"]:checked ~ .dialog-start {
+input[value="start"]:checked ~ .dialog-start {
   display:block
 }
 
 
-input[vlaue="action"]:checked ~ .dialog-action {
+input[value="action"]:checked ~ .dialog-action {
   display:block
 }
 
-input[vlaue="build"]:checked ~ .dialog-build {
+input[value="build"]:checked ~ .dialog-build {
   display:block
 }
 
