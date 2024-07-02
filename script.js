@@ -4,7 +4,6 @@ import morph from "/vendor/morph@3.14.0.esm.js";
 import { QRCode } from "/vendor/qrcode.js";
 import { PcgRandom } from "/vendor/pcg.js";
 
-window.PcgRandom = PcgRandom;
 window.Alpine = Alpine;
 
 Alpine.plugin(morph);
@@ -37,8 +36,8 @@ window.htmx.defineExtension("alpine-morph", {
 
 Alpine.data("game", () => ({
   data: {
-    test: 111,
-    dices: [6, 1],
+    seed: new PcgRandom(),
+    dices: [1, 1],
   },
   el: {
     roads: [...Array(72).fill({ [":class"]: "'AAA'" })],
@@ -63,8 +62,9 @@ Alpine.data("game", () => ({
         console.log("play-knight");
       },
       ["@start-turn"]() {
-        this.data.showDices = true;
-        console.log("start-turn", this.el.dices);
+        this.data.dices[0] = this.data.seed.next32() % 6 + 1
+        this.data.dices[1] = this.data.seed.next32() % 6 + 1
+        console.log("start-turn", );
       },
       ["@action-build"]() {
         console.log("action-build");
