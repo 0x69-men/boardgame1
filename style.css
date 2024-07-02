@@ -6,19 +6,20 @@ body,
   overflow: hidden;
 }
 
-[x-cloak] { display: none !important; }
-
+[x-cloak] {
+  display: none !important;
+}
 
 #root {
   display: grid;
   grid-template: 1fr / 1fr;
   place-items: center;
   background: #5290c1;
-  pointer-events:none;
+  pointer-events: none;
 }
 
-input{
-  pointer-events:all;
+input {
+  pointer-events: all;
 }
 
 #root > * {
@@ -212,15 +213,15 @@ i {
 
 /*Player Info*/
 .player {
-  border-radius:50%;
+  border-radius: 50%;
   position: absolute;
   --player-size: 25vmin;
   width: var(--player-size);
   height: var(--player-size);
 }
 
-.player.active{
-  box-shadow: 10px 5px 5px red;  
+.player.active {
+  box-shadow: 10px 5px 5px red;
 }
 
 .player.player0 {
@@ -367,16 +368,29 @@ i {
   line-height: 1em;
 }
 
-
-
 .dialog-start,
 .dialog-action,
 .dialog-build {
   display: none;
+  opacity: 0;
+  animation: 0.4s fade-in ease-in-out 0s forwards;
 }
 
-input[value="start"],input[value="action"],input[value="build"]{
-  display:none
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+input[value="start"],
+input[value="action"],
+input[value="build"] {
+  display: none;
 }
 
 input[value="start"]:checked ~ .dialog-start {
@@ -403,7 +417,7 @@ input[value="build"]:checked ~ .dialog-build {
 /*Button Magic*/
 
 button {
-  pointer-events:all;
+  pointer-events: all;
   background-image: linear-gradient(180deg, #f4f1ee, #ffffff);
   border-radius: 50%;
   box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.3), inset 0px 4px 1px 1px white,
@@ -515,7 +529,7 @@ button:active:after {
   transform-style: preserve-3d;
   transition: transform 1s;
   top: -300px;
-  position:relative;
+  position: relative;
 }
 
 .dot {
@@ -527,7 +541,6 @@ button:active:after {
   background-color: #ef233c;
   box-shadow: inset 2px 2px #d90429;
 }
-
 
 .side {
   position: absolute;
@@ -622,20 +635,17 @@ button:active:after {
 }
 
 .show-3 {
-transform: rotateY(810deg) rotateZ(720deg);
+  transform: rotateY(810deg) rotateZ(720deg);
 }
 
 .show-4 {
   transform: rotateX(-810deg) rotateZ(-1080deg);
-  
 }
 
 .show-5 {
   transform: rotateX(450deg) rotateZ(-720deg);
-  
 }
 
 .show-6 {
-    transform: rotateY(-450deg) rotateZ(-1440deg);
-  
+  transform: rotateY(-450deg) rotateZ(-1440deg);
 }
