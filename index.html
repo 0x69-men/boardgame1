@@ -282,7 +282,7 @@
     </div>
     <div class="layer">
         <template x-for="(p, i) in players">
-            <div class="player" :class="'player'+i">
+            <div class="player" :class="'player'+i" x-bind="players[0]">
                 <div class="avatar">
                     <img width="100%" src="/avatar.svg" />
                 </div>
@@ -324,10 +324,10 @@
         </template>
     </div>
     <div class="layer dialog">
-        <form name="selectDialog" x-bind="el.dialogue">
-            <input type="radio" name="dialog" value="start">
-            <input type="radio" name="dialog" value="action">
-            <input type="radio" name="dialog" value="build">
+        <form x-bind="el.dialogue">
+            <input x-model="data.activeDialog" type="radio" value="start">
+            <input x-model="data.activeDialog" type="radio" value="action">
+            <input x-model="data.activeDialog" type="radio" value="build">
 
             <div class="dialog-start">
                 <button type="button" @click="$dispatch('play-knight')"><i class="icon knight"></i></button>
@@ -342,7 +342,7 @@
             </div>
             <div class="dialog-build">
                 <button type="button" @click="$dispatch('build-back')"><i class="icon back"></i></button>
-                              <button type="button" @click="$dispatch('build-road')"><i class="icon road"></i></button>
+                <button type="button" @click="$dispatch('build-road')"><i class="icon road"></i></button>
 
                 <button type="button" @click="$dispatch('build-village')"><i class="icon village"></i></button>
                 <button type="button" @click="$dispatch('build-city')"><i class="icon city"></i></button>

@@ -375,6 +375,10 @@ i {
   display: none;
 }
 
+input[value="start"],input[value="action"],input[value="build"]{
+  display:none
+}
+
 input[value="start"]:checked ~ .dialog-start {
   display: block;
 }

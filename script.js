@@ -37,13 +37,14 @@ window.htmx.defineExtension("alpine-morph", {
 Alpine.data("game", () => ({
   data: {
     seed: new PcgRandom(42n),
+    activeDialog: "start",
     dices: [1, 1],
   },
   el: {
     roads: [...Array(72).fill({ [":class"]: "'AAA'" })],
     players: [{
-      [""]
-    }],
+      [":class"]:"active"
+    },{},{},{}],
     dices: {
       ["x-show"]() {
         return this.data.dices[0] + this.data.dices[1] > 0;
@@ -64,14 +65,14 @@ Alpine.data("game", () => ({
         console.log("play-knight");
       },
       ["@start-turn"]() {
-        this.$el.dialog.value="action"
+        this.data.activeDialog="action"
         this.data.dices[0] = this.data.seed.next32() % 6 + 1
         this.data.dices[1] = this.data.seed.next32() % 6 + 1
         
         console.log("start-turn");
       },
       ["@action-build"]() {
-        this.$el.dialog.value="build"
+        this.data.activeDialog="build"
         console.log("action-build");
       },
       ["@action-exchange"]() {
@@ -84,10 +85,11 @@ Alpine.data("game", () => ({
         console.log("action-trade");
       },
       ["@action-end-turn"]() {
+        this.data.activeDialog="start"
         console.log("action-end-turn");
       },
       ["@build-back"]() {
-        this.$el.dialog.value="action"
+        this.data.activeDialog="action"
         console.log("@build-back");
       },
       ["@build-road"]() {
