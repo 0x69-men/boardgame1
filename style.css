@@ -6,6 +6,9 @@ body,
   overflow: hidden;
 }
 
+[x-cloak] { display: none !important; }
+
+
 #root {
   display: grid;
   grid-template: 1fr / 1fr;

@@ -36,19 +36,26 @@ window.htmx.defineExtension("alpine-morph", {
 Alpine.data("game", () => ({
   data: {
     test: 111,
+    dices: [3,5],
   },
   el: {
     roads: [...Array(72).fill({ [":class"]: "'AAA'" })],
     players: [],
     dices: {
-      [":class"]()"hidden"
+      ["x-show"](){
+        return this.dices[0] && this.dices[1]
+      },
+      [":class"](){
+        return `show-${this.dices[0]} show-${this.dices[1]}`
+      },
     },
     dialogue: {
       ["@play-knight"]() {
         console.log("play-knight");
       },
       ["@start-turn"]() {
-        console.log("start-turn");
+        this.data.showDices=true
+        console.log("start-turn", this.el.dices);
       },
       ["@action-build"]() {
         console.log("action-build");
